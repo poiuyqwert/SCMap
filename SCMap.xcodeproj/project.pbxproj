@@ -1,0 +1,725 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		33E8D31606F48F0578A69E61 /* Qt Preprocess */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "SCMap" */;
+			buildPhases = (
+				5E618435888B9D49F8540165 /* Qt Qmake */,
+				7EF0942E79C014DCEC8976BC /* Qt Preprocessors */,
+			);
+			dependencies = (
+			);
+			name = "Qt Preprocess";
+			productName = "Qt Preprocess";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		087BAF0A07464EAB9CC87560 /* scenario.chk in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0301C98F39584926BC05A5B7 /* scenario.chk */; };
+		0C201559016E4EF3991B1296 /* Map.h in Compile Sources */ = {isa = PBXBuildFile; fileRef = B8D016B316104856B88FACA7 /* Map.h */; };
+		21988E4E1DF54EA2AF28CC42 /* MainWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = F2EA523B56574A06BC97D5A1 /* MainWindow.cpp */; };
+		25FDC8C28EB4434DAEFF9B8E /* main.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = AAA240F199854AA0A9980EE1 /* main.cpp */; };
+		2E3960AB64D748CCAD5C8EA5 /* badlands.vx4 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E9AB123A9A940AF9D247860 /* badlands.vx4 */; };
+		3179AB447E6E47AF9E970D50 /* TerrainListGroup.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C9609A93CFA444D8B4BE99E5 /* TerrainListGroup.cpp */; };
+		3ACB592D95947B6B5D674F53 /* QtCore.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 880A320EDF9BAE828D6CC3F8 /* QtCore.framework */; };
+		77A679D4DEF942D7A657589C /* Map.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 3875217E711A47C38D01F1BB /* Map.cpp */; };
+		798B3EC475EC48F6B01CCCBF /* MapSubWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = EBEC958E1B9F4DD6B3C4452A /* MapSubWindow.cpp */; };
+		8771A8C96E9C391044035D99 /* OpenGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = D4B32C2222F82AC56BADEB21 /* OpenGL.framework */; };
+		8A7DF7B1264D4B5BB3B82B8D /* badlands.vf4 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 64F8A5A1D562400BA0142B58 /* badlands.vf4 */; };
+		8D267F2E4776F0ECA2F49DC8 /* IOKit.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = A1A67BEAA744704B29168D39 /* IOKit.framework */; };
+		A02E128C1C4AEBF80054D1C2 /* libSFmpqapi.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF5C6EA7AE1E4292889BDFF1 /* libSFmpqapi.dylib */; };
+		A02E128F1C4B0E280054D1C2 /* UnitsListGroup.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A02E128D1C4B0E280054D1C2 /* UnitsListGroup.cpp */; };
+		A02E12921C4B0EC20054D1C2 /* SpritesListGroup.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A02E12901C4B0EC20054D1C2 /* SpritesListGroup.cpp */; };
+		A02E12951C4B0EEF0054D1C2 /* DoodadsListGroup.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A02E12931C4B0EEF0054D1C2 /* DoodadsListGroup.cpp */; };
+		A041231E1C54283800E2E777 /* MinimapLayer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A041231A1C54283800E2E777 /* MinimapLayer.cpp */; };
+		A041231F1C54283800E2E777 /* TerrainMinimapLayer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A041231C1C54283800E2E777 /* TerrainMinimapLayer.cpp */; };
+		A04123221C542BED00E2E777 /* EditMode.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A04123201C542BED00E2E777 /* EditMode.cpp */; };
+		A04123251C543A7C00E2E777 /* TerrainEditMode.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A04123231C543A7C00E2E777 /* TerrainEditMode.cpp */; };
+		A04123281C54A5FB00E2E777 /* MapControllers.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A04123261C54A5FB00E2E777 /* MapControllers.cpp */; };
+		A041232E1C57238A00E2E777 /* LocationsEditMode.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A041232C1C57238A00E2E777 /* LocationsEditMode.cpp */; };
+		A097C0A41C507BF300874150 /* PainterScrollArea.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A097C0A21C507BF300874150 /* PainterScrollArea.cpp */; };
+		A097C0A71C507C9A00874150 /* MapScrollArea.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A097C0A51C507C9A00874150 /* MapScrollArea.cpp */; };
+		A097C0A81C50927D00874150 /* PainterScrollArea.h in Compile Sources */ = {isa = PBXBuildFile; fileRef = A097C0A31C507BF300874150 /* PainterScrollArea.h */; };
+		A097C0A91C50927D00874150 /* MapScrollArea.h in Compile Sources */ = {isa = PBXBuildFile; fileRef = A097C0A61C507C9A00874150 /* MapScrollArea.h */; };
+		A097C0B01C532FA400874150 /* MinimapWidget.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A097C0AE1C532FA400874150 /* MinimapWidget.cpp */; };
+		A097C0B11C53312F00874150 /* MinimapWidget.h in Compile Sources */ = {isa = PBXBuildFile; fileRef = A097C0AF1C532FA400874150 /* MinimapWidget.h */; };
+		A99B2AA0F9CBBDD12BA126A4 /* DiskArbitration.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */; };
+		B1836DE829D840FA871355BA /* LocationsListGroup.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2DFF2E85C2F1458C94FD6C70 /* LocationsListGroup.cpp */; };
+		B4EDFC554F4046E06D4D0F06 /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 29278340428C4CF1FB158280 /* QtGui.framework */; };
+		B7F71156000E438E9BEA643E /* TerrainMapLayer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 8899459D04E54DD69CB2B249 /* TerrainMapLayer.cpp */; };
+		BC49970598404D2E8B751011 /* libSFmpqapi.dylib in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = FF5C6EA7AE1E4292889BDFF1 /* libSFmpqapi.dylib */; };
+		BE8E78ED70384E3AA8E77CA1 /* badlands.vr4 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D69CD93F6AC423A9874395A /* badlands.vr4 */; };
+		CA8A6BC2A6604F7B97EF2E47 /* ListGroup.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 10B657668BCC446D893E7E18 /* ListGroup.cpp */; };
+		D346ED4E40F644E28B370961 /* badlands.wpe in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8EC0500B111C46198FEF2F3F /* badlands.wpe */; };
+		D500E2B49AC04D84958D1417 /* MapLayer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = DA7A196FCD7443F287CD324E /* MapLayer.cpp */; };
+		D89065BB66E94CE8A87C44A9 /* badlands.grp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 179A130C79E4458C9615BA2A /* badlands.grp */; };
+		E45E51A644D5FC9F942ECE55 /* AGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */; };
+		E9141225C4464BE4AB3F50F1 /* badlands.cv5 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AA4E90DF50854A3CB415DBEB /* badlands.cv5 */; };
+		EA58CD2CEF724B28A1E6E077 /* dddata.bin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19D66D6E58AF477B8CD49E4D /* dddata.bin */; };
+		ED60EBCCA6D44BAC9221BDE8 /* MapSubWindow.h in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7C1CB0FA72824D0182FA7BDF /* MapSubWindow.h */; };
+		EE169CE9A646445C943C83E8 /* libSCMS.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 4095FCA2337945949CF1EADD /* libSCMS.framework */; };
+		EED633C050F9EEAFAD67370C /* QtWidgets.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 416B663E65C2EF71F5418A9A /* QtWidgets.framework */; };
+		FA9E0F8B6CF741BCA1727448 /* MainWindow.h in Compile Sources */ = {isa = PBXBuildFile; fileRef = 327757F6E7BC47D48F5DDA2B /* MainWindow.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		DA9479DB78C5401497526FC9 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.h";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"${DERIVED_FILE_DIR}/moc_${INPUT_FILE_BASE}.cpp",
+			);
+			script = "/Users/zachzahos/Applications/Qt551/5.5/clang_64/bin/moc ${INPUT_FILE_PATH} -o ${DERIVED_FILE_DIR}/moc_${INPUT_FILE_BASE}.cpp";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXContainerItemProxy section */
+		A02E122B1C4AB8F40054D1C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DB9C3763D02B1415CD9D565 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33E8D31606F48F0578A69E61;
+			remoteInfo = "Qt Preprocess";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0CA9B75CE14449D3ABCAE72F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				A02E128C1C4AEBF80054D1C2 /* libSFmpqapi.dylib in CopyFiles */,
+				E9141225C4464BE4AB3F50F1 /* badlands.cv5 in CopyFiles */,
+				D89065BB66E94CE8A87C44A9 /* badlands.grp in CopyFiles */,
+				8A7DF7B1264D4B5BB3B82B8D /* badlands.vf4 in CopyFiles */,
+				BE8E78ED70384E3AA8E77CA1 /* badlands.vr4 in CopyFiles */,
+				2E3960AB64D748CCAD5C8EA5 /* badlands.vx4 in CopyFiles */,
+				D346ED4E40F644E28B370961 /* badlands.wpe in CopyFiles */,
+				EA58CD2CEF724B28A1E6E077 /* dddata.bin in CopyFiles */,
+				087BAF0A07464EAB9CC87560 /* scenario.chk in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		008EAC65D999671F3A03342A /* .qmake.stash */ = {isa = PBXFileReference; lastKnownFileType = text; name = .qmake.stash; path = /Users/zachzahos/Documents/Projects/SCMap/.qmake.stash; sourceTree = "<absolute>"; };
+		0301C98F39584926BC05A5B7 /* scenario.chk */ = {isa = PBXFileReference; lastKnownFileType = file; path = scenario.chk; sourceTree = "<group>"; };
+		0303B852EF81461EA8A5F481 /* windows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = windows.h; sourceTree = "<group>"; };
+		03B950DE7BD74F3D83B51CE9 /* pshpack1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pshpack1.h; sourceTree = "<group>"; };
+		10B657668BCC446D893E7E18 /* ListGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ListGroup.cpp; sourceTree = "<group>"; };
+		138349D9A90144199BD0ED39 /* TerrainMapLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerrainMapLayer.h; sourceTree = "<group>"; };
+		179A130C79E4458C9615BA2A /* badlands.grp */ = {isa = PBXFileReference; lastKnownFileType = file; path = badlands.grp; sourceTree = "<group>"; };
+		179B46AE67A24F1483883B66 /* TerrainListGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerrainListGroup.h; sourceTree = "<group>"; };
+		19D66D6E58AF477B8CD49E4D /* dddata.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = dddata.bin; sourceTree = "<group>"; };
+		29278340428C4CF1FB158280 /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = /Users/zachzahos/Applications/Qt551/5.5/clang_64/lib/QtGui.framework; sourceTree = "<absolute>"; };
+		2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
+		2DFF2E85C2F1458C94FD6C70 /* LocationsListGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LocationsListGroup.cpp; sourceTree = "<group>"; };
+		2E9AB123A9A940AF9D247860 /* badlands.vx4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = badlands.vx4; sourceTree = "<group>"; };
+		327757F6E7BC47D48F5DDA2B /* MainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
+		3875217E711A47C38D01F1BB /* Map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
+		4095FCA2337945949CF1EADD /* libSCMS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libSCMS.framework; sourceTree = SOURCE_ROOT; };
+		416B663E65C2EF71F5418A9A /* QtWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtWidgets.framework; path = /Users/zachzahos/Applications/Qt551/5.5/clang_64/lib/QtWidgets.framework; sourceTree = "<absolute>"; };
+		64F8A5A1D562400BA0142B58 /* badlands.vf4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = badlands.vf4; sourceTree = "<group>"; };
+		6D69CD93F6AC423A9874395A /* badlands.vr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = badlands.vr4; sourceTree = "<group>"; };
+		7C1CB0FA72824D0182FA7BDF /* MapSubWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapSubWindow.h; sourceTree = "<group>"; };
+		880A320EDF9BAE828D6CC3F8 /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = /Users/zachzahos/Applications/Qt551/5.5/clang_64/lib/QtCore.framework; sourceTree = "<absolute>"; };
+		8899459D04E54DD69CB2B249 /* TerrainMapLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TerrainMapLayer.cpp; sourceTree = "<group>"; };
+		8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
+		8EC0500B111C46198FEF2F3F /* badlands.wpe */ = {isa = PBXFileReference; lastKnownFileType = file; path = badlands.wpe; sourceTree = "<group>"; };
+		A02E128D1C4B0E280054D1C2 /* UnitsListGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UnitsListGroup.cpp; path = Sources/ListGroups/UnitsListGroup.cpp; sourceTree = SOURCE_ROOT; };
+		A02E128E1C4B0E280054D1C2 /* UnitsListGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnitsListGroup.h; path = Sources/ListGroups/UnitsListGroup.h; sourceTree = SOURCE_ROOT; };
+		A02E12901C4B0EC20054D1C2 /* SpritesListGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpritesListGroup.cpp; path = Sources/ListGroups/SpritesListGroup.cpp; sourceTree = SOURCE_ROOT; };
+		A02E12911C4B0EC20054D1C2 /* SpritesListGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpritesListGroup.h; path = Sources/ListGroups/SpritesListGroup.h; sourceTree = SOURCE_ROOT; };
+		A02E12931C4B0EEF0054D1C2 /* DoodadsListGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DoodadsListGroup.cpp; path = Sources/ListGroups/DoodadsListGroup.cpp; sourceTree = SOURCE_ROOT; };
+		A02E12941C4B0EEF0054D1C2 /* DoodadsListGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoodadsListGroup.h; path = Sources/ListGroups/DoodadsListGroup.h; sourceTree = SOURCE_ROOT; };
+		A041231A1C54283800E2E777 /* MinimapLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MinimapLayer.cpp; sourceTree = "<group>"; };
+		A041231B1C54283800E2E777 /* MinimapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinimapLayer.h; sourceTree = "<group>"; };
+		A041231C1C54283800E2E777 /* TerrainMinimapLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TerrainMinimapLayer.cpp; sourceTree = "<group>"; };
+		A041231D1C54283800E2E777 /* TerrainMinimapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrainMinimapLayer.h; sourceTree = "<group>"; };
+		A04123201C542BED00E2E777 /* EditMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EditMode.cpp; sourceTree = "<group>"; };
+		A04123211C542BED00E2E777 /* EditMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMode.h; sourceTree = "<group>"; };
+		A04123231C543A7C00E2E777 /* TerrainEditMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TerrainEditMode.cpp; sourceTree = "<group>"; };
+		A04123241C543A7C00E2E777 /* TerrainEditMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrainEditMode.h; sourceTree = "<group>"; };
+		A04123261C54A5FB00E2E777 /* MapControllers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapControllers.cpp; path = Sources/MapControllers.cpp; sourceTree = SOURCE_ROOT; };
+		A04123271C54A5FB00E2E777 /* MapControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapControllers.h; path = Sources/MapControllers.h; sourceTree = SOURCE_ROOT; };
+		A041232C1C57238A00E2E777 /* LocationsEditMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LocationsEditMode.cpp; sourceTree = "<group>"; };
+		A041232D1C57238A00E2E777 /* LocationsEditMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsEditMode.h; sourceTree = "<group>"; };
+		A097C0A21C507BF300874150 /* PainterScrollArea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PainterScrollArea.cpp; path = Sources/PainterScrollArea.cpp; sourceTree = SOURCE_ROOT; };
+		A097C0A31C507BF300874150 /* PainterScrollArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PainterScrollArea.h; path = Sources/PainterScrollArea.h; sourceTree = SOURCE_ROOT; };
+		A097C0A51C507C9A00874150 /* MapScrollArea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapScrollArea.cpp; path = Sources/MapScrollArea.cpp; sourceTree = SOURCE_ROOT; };
+		A097C0A61C507C9A00874150 /* MapScrollArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapScrollArea.h; path = Sources/MapScrollArea.h; sourceTree = SOURCE_ROOT; };
+		A097C0AE1C532FA400874150 /* MinimapWidget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MinimapWidget.cpp; path = Sources/MinimapWidget.cpp; sourceTree = SOURCE_ROOT; };
+		A097C0AF1C532FA400874150 /* MinimapWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinimapWidget.h; path = Sources/MinimapWidget.h; sourceTree = SOURCE_ROOT; };
+		A1A67BEAA744704B29168D39 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		A74776B054E147399389A218 /* poppack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poppack.h; sourceTree = "<group>"; };
+		AA4E90DF50854A3CB415DBEB /* badlands.cv5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = badlands.cv5; sourceTree = "<group>"; };
+		AAA240F199854AA0A9980EE1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B123BDB5609B4278900ADE81 /* MapLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapLayer.h; sourceTree = "<group>"; };
+		B8D016B316104856B88FACA7 /* Map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		B96A9CAE34AB05CFAA96E36F /* SCMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9609A93CFA444D8B4BE99E5 /* TerrainListGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TerrainListGroup.cpp; sourceTree = "<group>"; };
+		D4B32C2222F82AC56BADEB21 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		DA7A196FCD7443F287CD324E /* MapLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MapLayer.cpp; sourceTree = "<group>"; };
+		E141F46442B6423484BDABC8 /* LocationsListGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationsListGroup.h; sourceTree = "<group>"; };
+		E7752823158949459D971AFA /* ListGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListGroup.h; sourceTree = "<group>"; };
+		E90B7FDA7A3E7E9FE4405C97 /* SCMap.pro */ = {isa = PBXFileReference; lastKnownFileType = text; name = SCMap.pro; path = /Users/zachzahos/Documents/Projects/SCMap/SCMap.pro; sourceTree = "<absolute>"; };
+		EBEC958E1B9F4DD6B3C4452A /* MapSubWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MapSubWindow.cpp; sourceTree = "<group>"; };
+		F2EA523B56574A06BC97D5A1 /* MainWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MainWindow.cpp; sourceTree = "<group>"; };
+		F8F2549C1D1746B096C7AAF9 /* SFmpqapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFmpqapi.h; sourceTree = "<group>"; };
+		FF5C6EA7AE1E4292889BDFF1 /* libSFmpqapi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libSFmpqapi.dylib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1C883685E82D5676953459A /* Link Binary With Libraries */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED633C050F9EEAFAD67370C /* QtWidgets.framework in Link Binary With Libraries */,
+				B4EDFC554F4046E06D4D0F06 /* QtGui.framework in Link Binary With Libraries */,
+				3ACB592D95947B6B5D674F53 /* QtCore.framework in Link Binary With Libraries */,
+				A99B2AA0F9CBBDD12BA126A4 /* DiskArbitration.framework in Link Binary With Libraries */,
+				8D267F2E4776F0ECA2F49DC8 /* IOKit.framework in Link Binary With Libraries */,
+				8771A8C96E9C391044035D99 /* OpenGL.framework in Link Binary With Libraries */,
+				E45E51A644D5FC9F942ECE55 /* AGL.framework in Link Binary With Libraries */,
+				BC49970598404D2E8B751011 /* libSFmpqapi.dylib in Link Binary With Libraries */,
+				EE169CE9A646445C943C83E8 /* libSCMS.framework in Link Binary With Libraries */,
+			);
+			name = "Link Binary With Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17308A2ADB174C108F9F063D /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C30F1E0FB0414345800DEED1 /* SFmpqapi */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		6F441A7D1E344F58AAA8D9D1 /* ListGroups */ = {
+			isa = PBXGroup;
+			children = (
+				10B657668BCC446D893E7E18 /* ListGroup.cpp */,
+				E7752823158949459D971AFA /* ListGroup.h */,
+				C9609A93CFA444D8B4BE99E5 /* TerrainListGroup.cpp */,
+				179B46AE67A24F1483883B66 /* TerrainListGroup.h */,
+				2DFF2E85C2F1458C94FD6C70 /* LocationsListGroup.cpp */,
+				E141F46442B6423484BDABC8 /* LocationsListGroup.h */,
+				A02E128D1C4B0E280054D1C2 /* UnitsListGroup.cpp */,
+				A02E128E1C4B0E280054D1C2 /* UnitsListGroup.h */,
+				A02E12901C4B0EC20054D1C2 /* SpritesListGroup.cpp */,
+				A02E12911C4B0EC20054D1C2 /* SpritesListGroup.h */,
+				A02E12931C4B0EEF0054D1C2 /* DoodadsListGroup.cpp */,
+				A02E12941C4B0EEF0054D1C2 /* DoodadsListGroup.h */,
+			);
+			path = ListGroups;
+			sourceTree = "<group>";
+		};
+		7042B16B8858444B900FF00A /* MapLayers */ = {
+			isa = PBXGroup;
+			children = (
+				DA7A196FCD7443F287CD324E /* MapLayer.cpp */,
+				B123BDB5609B4278900ADE81 /* MapLayer.h */,
+				8899459D04E54DD69CB2B249 /* TerrainMapLayer.cpp */,
+				138349D9A90144199BD0ED39 /* TerrainMapLayer.h */,
+			);
+			path = MapLayers;
+			sourceTree = "<group>";
+		};
+		74B182DB50CB5611B5C1C297 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E90B7FDA7A3E7E9FE4405C97 /* SCMap.pro */,
+				008EAC65D999671F3A03342A /* .qmake.stash */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<Group>";
+		};
+		A04123181C54283800E2E777 /* EditModes */ = {
+			isa = PBXGroup;
+			children = (
+				A04123201C542BED00E2E777 /* EditMode.cpp */,
+				A04123211C542BED00E2E777 /* EditMode.h */,
+				A04123231C543A7C00E2E777 /* TerrainEditMode.cpp */,
+				A04123241C543A7C00E2E777 /* TerrainEditMode.h */,
+				A041232C1C57238A00E2E777 /* LocationsEditMode.cpp */,
+				A041232D1C57238A00E2E777 /* LocationsEditMode.h */,
+			);
+			name = EditModes;
+			path = Sources/EditModes;
+			sourceTree = SOURCE_ROOT;
+		};
+		A04123191C54283800E2E777 /* MinimapLayers */ = {
+			isa = PBXGroup;
+			children = (
+				A041231A1C54283800E2E777 /* MinimapLayer.cpp */,
+				A041231B1C54283800E2E777 /* MinimapLayer.h */,
+				A041231C1C54283800E2E777 /* TerrainMinimapLayer.cpp */,
+				A041231D1C54283800E2E777 /* TerrainMinimapLayer.h */,
+			);
+			name = MinimapLayers;
+			path = Sources/MinimapLayers;
+			sourceTree = SOURCE_ROOT;
+		};
+		AF39DD055C3EF8226FBE929D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4095FCA2337945949CF1EADD /* libSCMS.framework */,
+				416B663E65C2EF71F5418A9A /* QtWidgets.framework */,
+				29278340428C4CF1FB158280 /* QtGui.framework */,
+				880A320EDF9BAE828D6CC3F8 /* QtCore.framework */,
+				2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */,
+				A1A67BEAA744704B29168D39 /* IOKit.framework */,
+				D4B32C2222F82AC56BADEB21 /* OpenGL.framework */,
+				8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<Group>";
+		};
+		C30F1E0FB0414345800DEED1 /* SFmpqapi */ = {
+			isa = PBXGroup;
+			children = (
+				A74776B054E147399389A218 /* poppack.h */,
+				03B950DE7BD74F3D83B51CE9 /* pshpack1.h */,
+				F8F2549C1D1746B096C7AAF9 /* SFmpqapi.h */,
+				0303B852EF81461EA8A5F481 /* windows.h */,
+				FF5C6EA7AE1E4292889BDFF1 /* libSFmpqapi.dylib */,
+			);
+			path = SFmpqapi;
+			sourceTree = "<group>";
+		};
+		E8C543AB96796ECAA2E65C57 /* SCMap */ = {
+			isa = PBXGroup;
+			children = (
+				F4D7001DF0CB4DE2B9AFDECF /* Sources */,
+				F76A674886644DFA853D858B /* Resources */,
+				17308A2ADB174C108F9F063D /* Libraries */,
+				74B182DB50CB5611B5C1C297 /* Supporting Files */,
+				AF39DD055C3EF8226FBE929D /* Frameworks */,
+				FE0A091FDBFB3E9C31B7A1BD /* Products */,
+			);
+			name = SCMap;
+			sourceTree = "<Group>";
+		};
+		F4D7001DF0CB4DE2B9AFDECF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AAA240F199854AA0A9980EE1 /* main.cpp */,
+				F2EA523B56574A06BC97D5A1 /* MainWindow.cpp */,
+				327757F6E7BC47D48F5DDA2B /* MainWindow.h */,
+				3875217E711A47C38D01F1BB /* Map.cpp */,
+				B8D016B316104856B88FACA7 /* Map.h */,
+				EBEC958E1B9F4DD6B3C4452A /* MapSubWindow.cpp */,
+				7C1CB0FA72824D0182FA7BDF /* MapSubWindow.h */,
+				A097C0A21C507BF300874150 /* PainterScrollArea.cpp */,
+				A097C0A31C507BF300874150 /* PainterScrollArea.h */,
+				A097C0A51C507C9A00874150 /* MapScrollArea.cpp */,
+				A097C0A61C507C9A00874150 /* MapScrollArea.h */,
+				A097C0AE1C532FA400874150 /* MinimapWidget.cpp */,
+				A097C0AF1C532FA400874150 /* MinimapWidget.h */,
+				A04123261C54A5FB00E2E777 /* MapControllers.cpp */,
+				A04123271C54A5FB00E2E777 /* MapControllers.h */,
+				A04123181C54283800E2E777 /* EditModes */,
+				A04123191C54283800E2E777 /* MinimapLayers */,
+				6F441A7D1E344F58AAA8D9D1 /* ListGroups */,
+				7042B16B8858444B900FF00A /* MapLayers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F76A674886644DFA853D858B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA4E90DF50854A3CB415DBEB /* badlands.cv5 */,
+				179A130C79E4458C9615BA2A /* badlands.grp */,
+				64F8A5A1D562400BA0142B58 /* badlands.vf4 */,
+				6D69CD93F6AC423A9874395A /* badlands.vr4 */,
+				2E9AB123A9A940AF9D247860 /* badlands.vx4 */,
+				8EC0500B111C46198FEF2F3F /* badlands.wpe */,
+				19D66D6E58AF477B8CD49E4D /* dddata.bin */,
+				0301C98F39584926BC05A5B7 /* scenario.chk */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FE0A091FDBFB3E9C31B7A1BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B96A9CAE34AB05CFAA96E36F /* SCMap.app */,
+			);
+			name = Products;
+			sourceTree = "<Group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC118B779632D3328EB5A998 /* SCMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "SCMap" */;
+			buildPhases = (
+				D1C883685E82D5676953459A /* Link Binary With Libraries */,
+				82049198CE8F4B7B99420C71 /* Compile Sources */,
+				30414803F31797EB689AE508 /* Copy Bundle Resources */,
+				0CA9B75CE14449D3ABCAE72F /* CopyFiles */,
+			);
+			buildRules = (
+				DA9479DB78C5401497526FC9 /* PBXBuildRule */,
+			);
+			dependencies = (
+				1232C72AFB54E31C503D918B /* PBXTargetDependency */,
+			);
+			name = SCMap;
+			productName = SCMap;
+			productReference = B96A9CAE34AB05CFAA96E36F /* SCMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DB9C3763D02B1415CD9D565 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = DAC4C1AA5EDEA1C85E9CA5E6 /* Build configuration list for PBXProject "SCMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E8C543AB96796ECAA2E65C57 /* SCMap */;
+			productRefGroup = FE0A091FDBFB3E9C31B7A1BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC118B779632D3328EB5A998 /* SCMap */,
+				33E8D31606F48F0578A69E61 /* Qt Preprocess */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30414803F31797EB689AE508 /* Copy Bundle Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Copy Bundle Resources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E618435888B9D49F8540165 /* Qt Qmake */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Qt Qmake";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/zachzahos/Documents/Projects/SCMap/ -f SCMap.xcodeproj/qt_makeqmake.mak";
+			showEnvVarsInLog = 0;
+		};
+		7EF0942E79C014DCEC8976BC /* Qt Preprocessors */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Qt Preprocessors";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/zachzahos/Documents/Projects/SCMap/ -f SCMap.xcodeproj/qt_preprocess.mak";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		82049198CE8F4B7B99420C71 /* Compile Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A097C0B11C53312F00874150 /* MinimapWidget.h in Compile Sources */,
+				A04123221C542BED00E2E777 /* EditMode.cpp in Compile Sources */,
+				A097C0A81C50927D00874150 /* PainterScrollArea.h in Compile Sources */,
+				A097C0A91C50927D00874150 /* MapScrollArea.h in Compile Sources */,
+				A02E12951C4B0EEF0054D1C2 /* DoodadsListGroup.cpp in Compile Sources */,
+				A04123251C543A7C00E2E777 /* TerrainEditMode.cpp in Compile Sources */,
+				A04123281C54A5FB00E2E777 /* MapControllers.cpp in Compile Sources */,
+				A097C0A41C507BF300874150 /* PainterScrollArea.cpp in Compile Sources */,
+				A041231F1C54283800E2E777 /* TerrainMinimapLayer.cpp in Compile Sources */,
+				25FDC8C28EB4434DAEFF9B8E /* main.cpp in Compile Sources */,
+				21988E4E1DF54EA2AF28CC42 /* MainWindow.cpp in Compile Sources */,
+				FA9E0F8B6CF741BCA1727448 /* MainWindow.h in Compile Sources */,
+				A041231E1C54283800E2E777 /* MinimapLayer.cpp in Compile Sources */,
+				A097C0B01C532FA400874150 /* MinimapWidget.cpp in Compile Sources */,
+				77A679D4DEF942D7A657589C /* Map.cpp in Compile Sources */,
+				0C201559016E4EF3991B1296 /* Map.h in Compile Sources */,
+				798B3EC475EC48F6B01CCCBF /* MapSubWindow.cpp in Compile Sources */,
+				A097C0A71C507C9A00874150 /* MapScrollArea.cpp in Compile Sources */,
+				ED60EBCCA6D44BAC9221BDE8 /* MapSubWindow.h in Compile Sources */,
+				A041232E1C57238A00E2E777 /* LocationsEditMode.cpp in Compile Sources */,
+				CA8A6BC2A6604F7B97EF2E47 /* ListGroup.cpp in Compile Sources */,
+				B1836DE829D840FA871355BA /* LocationsListGroup.cpp in Compile Sources */,
+				3179AB447E6E47AF9E970D50 /* TerrainListGroup.cpp in Compile Sources */,
+				A02E12921C4B0EC20054D1C2 /* SpritesListGroup.cpp in Compile Sources */,
+				A02E128F1C4B0E280054D1C2 /* UnitsListGroup.cpp in Compile Sources */,
+				D500E2B49AC04D84958D1417 /* MapLayer.cpp in Compile Sources */,
+				B7F71156000E438E9BEA643E /* TerrainMapLayer.cpp in Compile Sources */,
+			);
+			name = "Compile Sources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1232C72AFB54E31C503D918B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33E8D31606F48F0578A69E61 /* Qt Preprocess */;
+			targetProxy = A02E122B1C4AB8F40054D1C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		339EE1B2CC4FC24589A0EA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang;
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1.0;
+				DYLIB_CURRENT_VERSION = 1.0.0;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib,
+					/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib,
+					/Users/zachzahos/Documents/Projects/SCMap,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../../../Applications/Qt551/5.5/clang_64/lib/QtWidgets.framework/Headers,
+					../../../Applications/Qt551/5.5/clang_64/lib/QtGui.framework/Headers,
+					../../../Applications/Qt551/5.5/clang_64/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/AGL.framework/Headers,
+					"../../../Applications/Qt551/5.5/clang_64/mkspecs/macx-clang",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				LIBRARY_SEARCH_PATHS = (
+					/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib,
+					/System/Library/Frameworks/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-O2",
+					"-std=c++11",
+					"-stdlib=libc++",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_LDFLAGS = (
+					"-headerpad_max_install_names",
+					"-stdlib=libc++",
+					"-Wl,-rpath,/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib",
+					"-F/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib",
+				);
+				PRODUCT_NAME = SCMap;
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = macosx;
+				SYMROOT = /Users/zachzahos/Documents/Projects/SCMap/;
+			};
+			name = Release;
+		};
+		3AA6C32AC930069E80220CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1.0;
+				DYLIB_CURRENT_VERSION = 1.0.0;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib,
+					/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib,
+					/Users/zachzahos/Documents/Projects/SCMap,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../../../Applications/Qt551/5.5/clang_64/lib/QtWidgets.framework/Headers,
+					../../../Applications/Qt551/5.5/clang_64/lib/QtGui.framework/Headers,
+					../../../Applications/Qt551/5.5/clang_64/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/AGL.framework/Headers,
+					"../../../Applications/Qt551/5.5/clang_64/mkspecs/macx-clang",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				LIBRARY_SEARCH_PATHS = (
+					/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib,
+					/System/Library/Frameworks/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-O2",
+					"-std=c++11",
+					"-stdlib=libc++",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_LDFLAGS = (
+					"-headerpad_max_install_names",
+					"-stdlib=libc++",
+					"-Wl,-rpath,/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib",
+					"-F/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib",
+				);
+				PRODUCT_NAME = SCMap;
+				QT_LIBRARY_SUFFIX = _debug;
+				SDKROOT = macosx;
+				SYMROOT = /Users/zachzahos/Documents/Projects/SCMap/;
+			};
+			name = Debug;
+		};
+		6666AA5E688052234F6758D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../../../Applications/Qt551/5.5/clang_64/lib/QtWidgets.framework/Headers,
+					../../../Applications/Qt551/5.5/clang_64/lib/QtGui.framework/Headers,
+					../../../Applications/Qt551/5.5/clang_64/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/AGL.framework/Headers,
+					"../../../Applications/Qt551/5.5/clang_64/mkspecs/macx-clang",
+					"$(PROJECT_DIR)/Libraries/SFmpqapi",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries/SFmpqapi",
+				);
+				PRODUCT_NAME = SCMap;
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		77418F46922677BB04ED38DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../../../Applications/Qt551/5.5/clang_64/lib/QtWidgets.framework/Headers,
+					../../../Applications/Qt551/5.5/clang_64/lib/QtGui.framework/Headers,
+					../../../Applications/Qt551/5.5/clang_64/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/AGL.framework/Headers,
+					"../../../Applications/Qt551/5.5/clang_64/mkspecs/macx-clang",
+					"$(PROJECT_DIR)/Libraries/SFmpqapi",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries/SFmpqapi",
+				);
+				PRODUCT_NAME = SCMap;
+				QT_LIBRARY_SUFFIX = _debug;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "SCMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77418F46922677BB04ED38DD /* Debug */,
+				6666AA5E688052234F6758D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAC4C1AA5EDEA1C85E9CA5E6 /* Build configuration list for PBXProject "SCMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA6C32AC930069E80220CF1 /* Debug */,
+				339EE1B2CC4FC24589A0EA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6DB9C3763D02B1415CD9D565 /* Project object */;
+}
