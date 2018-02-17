@@ -8,8 +8,9 @@
 
 #pragma once
 
-class QStandardItem;
 class Map;
+class MapSubWindow;
+class QStandardItem;
 class QModelIndex;
 
 class ListGroup {
@@ -29,7 +30,7 @@ public:
 	ListGroup(QStandardItem *parent, char const *name);
 
 	virtual void update(Map *map) = 0;
-	virtual void itemSelected(QModelIndex index) = 0;
+	virtual void itemSelected(MapSubWindow *window, QStandardItem *item) = 0;
 	
 	QStandardItem *get_root()
 		{ return this->root; }

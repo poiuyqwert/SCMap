@@ -19,28 +19,38 @@
 
 #include <QPainter>
 
-void TerrainMinimapLayer::update(Map *map, QPainter &painter, QRect rect, float hScale, float vScale) {
+Point<u32> colorLookup[2][2] = {
+	{
+		{7,6},{32-7,6}
+	},
+	{
+		{7,32-6},{32-7,32-6}
+	}
+};
+
+void TerrainMinimapLayer::update(Map *map, QPainter &painter, QRect) {
 	CHK *chk = map->get_chk();
 	Tileset tileset = map->get_tileset();
 	
 	CHKSectionDIM *dim = chk->get_section<CHKSectionDIM>();
 	CHKSectionMTXM *mtxm = chk->get_section<CHKSectionMTXM>();
 	
-	float xstep = (dim->get_width() > 128 ? dim->get_width() / 128.0f : 1);
-	float ystep = (dim->get_height() > 128 ? dim->get_height() / 128.0f : 1);
-	int w = (dim->get_width() <= 64 ? 2 : 1);
-	int h = (dim->get_height() <= 64 ? 2 : 1);
+	Size<u16> mapSize = dim->get_size();
+	u16 largeDim = max(mapSize.width,mapSize.height);
 	
-	Pixels megatile;
-	for (float fy = 0; fy < dim->get_height(); fy += ystep) {
-		int y = fy;
-		for (float fx = 0; fx < dim->get_width(); fx += xstep) {
-			int x = fx;
-			CHKTile tile = mtxm->get_tile(x, y);
-			megatile = map->get_megatile(tile);
-			RGB rgb = tileset.wpe->get_color(megatile.pixels[6*megatile.width+7]);
-			painter.setPen(QColor(rgb.r, rgb.g, rgb.b));
-			painter.drawRect(x*w,y*h,w-1,h-1);
+	u8 step = (largeDim > CHKSectionDIM::Medium ? 2 : 1);
+	u8 size = (largeDim <= CHKSectionDIM::Tiny ? 2 : 1);
+	
+	for (u8 y = 0; y < mapSize.height / step; y += 1) {
+		for (u8 x = 0; x < mapSize.width / step; x += 1) {
+			for (u8 yo = 0; yo < size; yo++) {
+				for (u8 xo = 0; xo < size; xo++) {
+					CHKTile tile = mtxm->get_tile({(u8)(x * step), (u8)(y * step)});
+					Pixels megatile = map->get_megatile(tile);
+					RGB rgb = tileset.wpe->get_color(megatile.get(colorLookup[yo][xo]));
+					painter.fillRect(x*size+xo,y*size+yo,1,1, QColor(rgb.r, rgb.g, rgb.b));
+				}
+			}
 		}
 	}
 }

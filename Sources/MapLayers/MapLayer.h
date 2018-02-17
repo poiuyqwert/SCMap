@@ -16,6 +16,8 @@ class MapLayer {
 public:
 	enum {
 		Terrain,
+		Grid,
+		Locations,
 		
 		COUNT
 	};

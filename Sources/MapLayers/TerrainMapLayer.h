@@ -10,19 +10,16 @@
 
 #include "MapLayer.h"
 
-#include <libSCMS/Types.h>
-#include <libSCMS/Images.h>
-
 #include <map>
 
 class QPainter;
 class QRect;
 
 class TerrainMapLayer : public MapLayer {
-	std::map<u16, Pixels> pixels;
 	int colorShift, ticks;
 public:
-	TerrainMapLayer();
+	TerrainMapLayer()
+		: MapLayer(), colorShift(0), ticks(0) {}
 	
 	void update(Map *map, QPainter &painter, QRect rect);
 };

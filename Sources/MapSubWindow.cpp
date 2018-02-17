@@ -15,7 +15,6 @@ MapSubWindow::MapSubWindow(Map *map, MapControllers controllers) {
 	this->setAttribute(Qt::WA_DeleteOnClose);
 	
 	this->scrollArea = new MapScrollArea(map, controllers, this);
-	this->scrollArea->setSceneSize(QSize(32*64,32*64));
 	this->setWidget(this->scrollArea);
 	
 	connect(this->scrollArea, SIGNAL(viewportChanged(QRect)), this, SLOT(viewportUpdate(QRect)));

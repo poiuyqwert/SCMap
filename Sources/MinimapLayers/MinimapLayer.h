@@ -16,11 +16,12 @@ class MinimapLayer {
 public:
 	enum {
 		Terrain,
+		Units,
 		
 		COUNT
 	};
 	
 	MinimapLayer() {}
 	
-	virtual void update(Map *map, QPainter &painter, QRect rect, float hScale, float vScale) = 0;
+	virtual void update(Map *map, QPainter &painter, QRect rect) = 0;
 };

@@ -14,5 +14,5 @@ class TerrainMinimapLayer : public MinimapLayer {
 public:
 	TerrainMinimapLayer() {}
 	
-	void update(Map *map, QPainter &painter, QRect rect, float hScale, float vScale);
+	void update(Map *map, QPainter &painter, QRect rect);
 };

@@ -11,9 +11,12 @@
 
 #include <QPainter>
 #include <QRect>
-#include <QMouseEvent>
+#include <QPoint>
 
 void TerrainEditMode::update(Map *map, QPainter &painter, QRect rect) {
+	if (map->get_editMode() != EditMode::Terrain) {
+		return;
+	}
 	QPoint pos = map->get_mouse() + rect.topLeft();
 	if (rect.contains(pos)) {
 		int x = (int)(pos.x() / 32.0) * 32;
@@ -23,4 +26,8 @@ void TerrainEditMode::update(Map *map, QPainter &painter, QRect rect) {
 		painter.setPen(Qt::red);
 		painter.drawRect(x, y, 32, 32);
 	}
+}
+
+void TerrainEditMode::click(Map *, QPoint) {
+
 }

@@ -21,9 +21,9 @@ class MinimapWidget : public QWidget {
 	Q_OBJECT
 	Map *map;
 	QRect viewport;
+	QRect outputRect;
 	MapControllers mapControllers;
 	
-	float hScale,vScale;
 	QTimer *timer;
 public:
 	MinimapWidget(MapControllers controllers, QWidget *parent=0);

@@ -18,9 +18,6 @@
 
 #include <QPainter>
 
-TerrainMapLayer::TerrainMapLayer()
-	: MapLayer(), colorShift(0), ticks(0)
-{}
 
 void TerrainMapLayer::update(Map *map, QPainter &painter, QRect rect) {
 	CHK *chk = map->get_chk();
@@ -58,29 +55,15 @@ void TerrainMapLayer::update(Map *map, QPainter &painter, QRect rect) {
 	int endY = rect.bottom() / 32.0;
 	
 	Pixels megatile;
-	for (int y = startY; y <= endY; y++) {
+	for (u8 y = startY; y <= endY; y++) {
 		int py = y * 32 - rect.y();
-		for (int x = startX; x <= endX; x++) {
+		for (u8 x = startX; x <= endX; x++) {
 			int px = x * 32 - rect.x();
-			CHKTile tile = mtxm->get_tile(x, y);
+			CHKTile tile = mtxm->get_tile({x, y});
 			megatile = map->get_megatile(tile);
-			QImage image(megatile.pixels, megatile.width, megatile.height, QImage::Format_Indexed8);
+			QImage image(megatile.pixels, megatile.size.width, megatile.size.height, QImage::Format_Indexed8);
 			image.setColorTable(colors);
 			painter.drawImage(px, py, image);
 		}
-	}
-	
-	painter.setPen(Qt::black);
-	
-	startX = (int)ceil(rect.x() / 32.0) * 32 - rect.x();
-	startY = (int)ceil(rect.y() / 32.0) * 32 - rect.y();
-	endX = (endX * 32) - rect.x();
-	endY = (endY * 32) - rect.y();
-	
-	for (int x = startX; x <= endX; x += 32) {
-		painter.drawLine(x, 0, x, rect.height());
-	}
-	for (int y = startY; y <= endY; y += 32) {
-		painter.drawLine(0, y, rect.width(), y);
 	}
 }

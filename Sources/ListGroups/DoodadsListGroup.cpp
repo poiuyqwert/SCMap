@@ -16,10 +16,10 @@ DoodadsListGroup::DoodadsListGroup(QStandardItem *parent)
 	
 }
 
-void DoodadsListGroup::update(Map *map) {
-	
+void DoodadsListGroup::update(Map *) {
+
 }
 
-void DoodadsListGroup::itemSelected(QModelIndex index) {
-	
+void DoodadsListGroup::itemSelected(MapSubWindow *, QStandardItem *) {
+
 }

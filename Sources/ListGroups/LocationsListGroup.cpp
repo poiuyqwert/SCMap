@@ -8,6 +8,7 @@
 
 #include "LocationsListGroup.h"
 #include "Map.h"
+#include "MapSubWindow.h"
 
 #include <libSCMS/Types.h>
 #include <libSCMS/CHK.h>
@@ -29,20 +30,39 @@ void LocationsListGroup::update(Map *map) {
 		CHK *chk = map->get_chk();
 		CHKSectionMRGN *mrgn = chk->get_section<CHKSectionMRGN>();
 		CHKSectionSTR *str = chk->get_section<CHKSectionSTR>();
-		for (int i = 0; i < 255; i++) {
+		for (int i = 0; i < mrgn->max_locations(); i++) {
+			if (i == CHKSectionMRGN::AnywhereID) {
+				continue;
+			}
 			CHKLocation location = mrgn->get_location(i);
 			if (location.stringID) {
 				CHKString string = str->get_string(location.stringID-1);
 				if (!string.isNull()) {
-					QStandardItem *terrain = new QStandardItem((char *)string.string);
-					terrain->setFlags(terrain->flags() & ~Qt::ItemIsEditable);
-					root->appendRow(terrain);
+					QStandardItem *item = new QStandardItem((char *)string.string);
+					item->setData(QVariant(i));
+					item->setFlags(item->flags() & ~Qt::ItemIsEditable);
+					root->appendRow(item);
 				}
 			}
 		}
 	}
 }
 
-void LocationsListGroup::itemSelected(QModelIndex index) {
-	
+void LocationsListGroup::itemSelected(MapSubWindow *window, QStandardItem *item) {
+	Map *map = window->get_map();
+	map->set_editMode(EditMode::Locations);
+	if (!item->data().isValid()) {
+		return;
+	}
+	int locationID = item->data().toInt();
+	map->set_selectedLocation(locationID);
+	CHK *chk = map->get_chk();
+	CHKSectionMRGN *mrgn = chk->get_section<CHKSectionMRGN>();
+	CHKLocation location = mrgn->get_location(locationID);
+	QRect rect = QRect(
+					   QPoint(location.rect.left, location.rect.top),
+					   QPoint(location.rect.right, location.rect.bottom)
+					   )
+						.normalized();
+	window->centerOn(rect.center());
 }

@@ -21,4 +21,5 @@ public:
 		{ return "Terrain"; }
 	
 	void update(Map *map, QPainter &painter, QRect rect);
+	void click(Map *map, QPoint point);
 };

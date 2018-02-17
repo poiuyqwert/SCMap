@@ -50,8 +50,9 @@ public slots:
 	void listSelectionChanged(const QItemSelection &selected, const QItemSelection &unselected);
 	
 	void centerOn(QPoint point);
-	void changeEditMode(EditMode::Mode mode);
+	void changeEditMode(int mode);
 	void editModeChanged(EditMode::Mode mode);
 private:
+	void loadMap(Map *map);
 	MapSubWindow* activeSubWindow();
 };

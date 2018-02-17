@@ -15,5 +15,5 @@ public:
 	TerrainListGroup(QStandardItem *parent);
 	
 	void update(Map *map);
-	void itemSelected(QModelIndex index);
+	void itemSelected(MapSubWindow *window, QStandardItem *item);
 };

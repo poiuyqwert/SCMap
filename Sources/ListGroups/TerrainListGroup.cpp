@@ -1576,6 +1576,6 @@ void TerrainListGroup::update(Map *map) {
 	}
 }
 
-void TerrainListGroup::itemSelected(QModelIndex index) {
-	
+void TerrainListGroup::itemSelected(MapSubWindow *, QStandardItem *) {
+
 }

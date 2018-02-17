@@ -9,6 +9,7 @@
 #pragma once
 
 #include "EditMode.h"
+#include "Properties.h"
 
 #include <QObject>
 #include <QPoint>
@@ -20,33 +21,23 @@ class CHK;
 
 class Map : public QObject {
 	Q_OBJECT
-	CHK *chk;
-	Tileset tileset;
+
+	GETTER(CHK*, chk);
+	GETTER(Tileset, tileset);
 	
-	EditMode::Mode editMode;
+	GET_set(EditMode::Mode, editMode);
 	
-	QPoint mouse;
+	GET_SET(QPoint, mouse);
+	GET_SET(int, selectedLocation);
 	
 	std::map<u16, Pixels> megatiles;
 public:
 	Map(CHK *chk, Tileset tileset)
 		: chk(chk),tileset(tileset),editMode(EditMode::Terrain) {};
 	
+	static Map *fromCHK(CHK *chk);
 	static Map *loadMap(QString filename);
-	
-	CHK* get_chk()
-		{ return this->chk; }
-	Tileset get_tileset()
-		{ return this->tileset; }
-	
-	void set_editMode(EditMode::Mode editMode);
-	int get_editMode()
-		{ return this->editMode; }
-	
-	void set_mouse(QPoint mouse)
-		{ this->mouse = mouse; }
-	QPoint get_mouse()
-		{ return this->mouse; }
+	static Map *newMap();
 	
 	Pixels get_megatile(CHKTile tile);
 signals:

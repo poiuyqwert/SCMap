@@ -29,8 +29,9 @@ MapScrollArea::MapScrollArea(Map *map, MapControllers controllers, QWidget *pare
 
 	CHK *chk = map->get_chk();
 	CHKSectionDIM *dim = chk->get_section<CHKSectionDIM>();
-	
-	this->setSceneSize(QSize(dim->get_width()*32, dim->get_height()*32));
+	Size<u16> mapSize = dim->get_size();
+
+	this->setSceneSize(QSize(mapSize.width*32, mapSize.height*32));
 
 	this->timer = new QTimer(this);
 	this->timer->setTimerType(Qt::PreciseTimer);
@@ -42,11 +43,12 @@ MapScrollArea::MapScrollArea(Map *map, MapControllers controllers, QWidget *pare
 
 void MapScrollArea::centerOn(QPoint point) {
 	CHKSectionDIM *dim = this->map->get_chk()->get_section<CHKSectionDIM>();
+	Size<u16> mapSize = dim->get_size();
 	QRect viewport = this->getViewportRect();
-	int maxX = dim->get_width()*32 - viewport.width();
+	int maxX = mapSize.width*32 - viewport.width();
 	int x = point.x() - viewport.width()/2;
 	x = max(0,min(maxX,x));
-	int maxY = dim->get_height()*32 - viewport.height();
+	int maxY = mapSize.height*32 - viewport.height();
 	int y = point.y() - viewport.height()/2;
 	y = max(0,min(maxY,y));
 	this->horizontalScrollBar()->setValue(x);
@@ -96,7 +98,6 @@ void scrollAction(QScrollBar *scrollBar, int action, int max) {
 			break;
 	}
 	scrollBar->setSliderPosition(position);
-	printf("%d / %d\n", position, max);
 }
 
 void MapScrollArea::horizontalScrollAction(int action) {
@@ -119,7 +120,9 @@ void MapScrollArea::tick() {
 
 void MapScrollArea::paint(QPainter &painter, QRect rect) {
 	for (int layer = MapLayer::Terrain; layer < MapLayer::COUNT; layer++) {
+		painter.save();
 		this->mapControllers.mapLayers[layer]->update(this->map, painter, rect);
+		painter.restore();
 	}
 	this->mapControllers.editModes[this->map->get_editMode()]->update(this->map, painter, rect);
 }
@@ -131,4 +134,9 @@ void MapScrollArea::resizeEvent(QResizeEvent *event) {
 
 void MapScrollArea::mouseMoveEvent(QMouseEvent *event) {
 	this->map->set_mouse(event->pos());
+}
+
+void MapScrollArea::mousePressEvent(QMouseEvent *event) {
+	QPoint pos = event->pos() + this->getViewportRect().topLeft();
+	this->mapControllers.editModes[this->map->get_editMode()]->click(this->map, pos);
 }

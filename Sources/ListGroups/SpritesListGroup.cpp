@@ -16,10 +16,10 @@ SpritesListGroup::SpritesListGroup(QStandardItem *parent)
 	
 }
 
-void SpritesListGroup::update(Map *map) {
-	
+void SpritesListGroup::update(Map *) {
+
 }
 
-void SpritesListGroup::itemSelected(QModelIndex index) {
-	
+void SpritesListGroup::itemSelected(MapSubWindow *, QStandardItem *) {
+
 }

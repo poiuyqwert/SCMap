@@ -4,7 +4,9 @@
 #include "MapSubWindow.h"
 #include "TerrainEditMode.h"
 #include "LocationsEditMode.h"
+#include "UnitsEditMode.h"
 #include "TerrainMinimapLayer.h"
+#include "UnitsMinimapLayer.h"
 #include "TerrainListGroup.h"
 #include "LocationsListGroup.h"
 #include "UnitsListGroup.h"
@@ -12,6 +14,9 @@
 #include "DoodadsListGroup.h"
 #include "MinimapWidget.h"
 #include "TerrainMapLayer.h"
+#include "GridMapLayer.h"
+#include "LocationsMapLayer.h"
+#include "DataManager.h"
 
 #include <QSplitter>
 #include <QToolBar>
@@ -37,9 +42,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
 	this->setWindowTitle("SCMap v0.0.1");
 	
+	DataManager::getInstance().load_data();
+	
 	this->mapControllers.editModes[EditMode::Terrain] = new TerrainEditMode();
 	this->mapControllers.editModes[EditMode::Locations] = new LocationsEditMode();
+	this->mapControllers.editModes[EditMode::Units] = new UnitsEditMode();
 	this->mapControllers.minimapLayers[MinimapLayer::Terrain] = new TerrainMinimapLayer();
+	this->mapControllers.minimapLayers[MinimapLayer::Units] = new UnitsMinimapLayer();
 	QStandardItemModel *model = new QStandardItemModel();
 	QStandardItem *root = model->invisibleRootItem();
 	this->mapControllers.listGroups[ListGroup::Terrain] = new TerrainListGroup(root);
@@ -48,6 +57,8 @@ MainWindow::MainWindow(QWidget *parent)
 	this->mapControllers.listGroups[ListGroup::Sprites] = new SpritesListGroup(root);
 	this->mapControllers.listGroups[ListGroup::Doodads] = new DoodadsListGroup(root);
 	this->mapControllers.mapLayers[MapLayer::Terrain] = new TerrainMapLayer();
+	this->mapControllers.mapLayers[MapLayer::Grid] = new GridMapLayer();
+	this->mapControllers.mapLayers[MapLayer::Locations] = new LocationsMapLayer();
 	
 	QSplitter *splitter = new QSplitter(this);
 	QWidget *widget = new QWidget(splitter);
@@ -60,14 +71,6 @@ MainWindow::MainWindow(QWidget *parent)
 	innerLayout->setContentsMargins(5, 5, 5, 5);
 	QFrame *innerFrame = new QFrame();
 	innerFrame->setFrameStyle(QFrame::Panel | QFrame::Sunken);
-	QPalette palette = innerFrame->palette();
-	palette.setColor(backgroundRole(), Qt::black);
-	innerFrame->setPalette(palette);
-	innerFrame->setAutoFillBackground(true);
-	innerFrame->setMinimumWidth(130);
-	innerFrame->setMinimumHeight(130);
-	innerFrame->setMaximumWidth(130);
-	innerFrame->setMaximumHeight(130);
 	QHBoxLayout *minimapLayout = new QHBoxLayout();
 	minimapLayout->setContentsMargins(0, 0, 0, 0);
 	this->minimap = new MinimapWidget(this->mapControllers);
@@ -88,6 +91,7 @@ MainWindow::MainWindow(QWidget *parent)
 	widget->setLayout(layout);
 	splitter->addWidget(widget);
 	splitter->setStretchFactor(0, 0);
+	
 	QSplitter *vert = new QSplitter(Qt::Vertical, splitter);
 	this->mdi = new QMdiArea(vert);
 	this->mdi->setFrameStyle(QFrame::Panel | QFrame::Sunken);
@@ -107,15 +111,17 @@ MainWindow::MainWindow(QWidget *parent)
 	QToolBar *toolbar = this->addToolBar(tr("File"));
 	toolbar->setMovable(false);
 	toolbar->setIconSize(QSize(16,16));
-	QIcon fileIcon = this->style()->standardIcon(QStyle::SP_FileIcon);
-	QAction *action = toolbar->addAction(fileIcon, tr("New"));
+	QIcon newIcon = this->style()->standardIcon(QStyle::SP_FileIcon);
+	QAction *action = toolbar->addAction(newIcon, tr("New"));
 	connect(action, SIGNAL(triggered()), this, SLOT(newPressed()));
-	action = toolbar->addAction(fileIcon, tr("Open"));
+	QIcon openIcon = this->style()->standardIcon(QStyle::SP_FileDialogStart);
+	action = toolbar->addAction(openIcon, tr("Open"));
 	connect(action, SIGNAL(triggered()), this, SLOT(openPressed()));
 	this->comboBox = new QComboBox(toolbar);
 	for (int mode = EditMode::Terrain; mode < EditMode::COUNT; mode++) {
 		this->comboBox->addItem(this->mapControllers.editModes[mode]->name());
 	}
+	connect(this->comboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(changeEditMode(int)));
 	toolbar->addWidget(this->comboBox);
 	
 	QStatusBar *statusBar = new QStatusBar(this);
@@ -127,7 +133,8 @@ MainWindow::MainWindow(QWidget *parent)
 }
 
 void MainWindow::newPressed() {
-	
+	Map *map = Map::newMap();
+	this->loadMap(map);
 }
 
 void MainWindow::openPressed() {
@@ -137,20 +144,25 @@ void MainWindow::openPressed() {
 	}
 	Map *map = Map::loadMap(filename);
 	if (map) {
-		connect(map, SIGNAL(editModeChanged(EditMode::Mode)), this, SLOT(editModeChanged(EditMode::Mode)));
-		
-		MapSubWindow *window = new MapSubWindow(map, this->mapControllers);
-		this->mdi->addSubWindow(window);
-		window->resize(300, 200);
-		window->show();
-		connect(window, SIGNAL(viewportChanged(QRect)), this->minimap, SLOT(viewportChanged(QRect)));
+		this->loadMap(map);
 	}
+}
+
+void MainWindow::loadMap(Map *map) {
+	connect(map, SIGNAL(editModeChanged(EditMode::Mode)), this, SLOT(editModeChanged(EditMode::Mode)));
+	
+	MapSubWindow *window = new MapSubWindow(map, this->mapControllers);
+	this->mdi->addSubWindow(window);
+	window->resize(300, 200);
+	connect(window, SIGNAL(viewportChanged(QRect)), this->minimap, SLOT(viewportChanged(QRect)));
+	window->showMaximized();
 }
 
 void MainWindow::mapSubWindowActivated(QMdiSubWindow *w) {
 	if (w) {
 		MapSubWindow *window = (MapSubWindow *)w;
 		Map *map = window->get_map();
+		this->comboBox->setCurrentIndex(map->get_editMode());
 		this->minimap->set_map(map);
 		this->minimap->viewportChanged(window->get_viewport());
 		for (int group = ListGroup::Terrain; group < ListGroup::COUNT; group++) {
@@ -161,12 +173,17 @@ void MainWindow::mapSubWindowActivated(QMdiSubWindow *w) {
 
 void MainWindow::listSelectionChanged(const QItemSelection &/*selected*/, const QItemSelection &/*unselected*/) {
 	const QModelIndex index = this->treeView->selectionModel()->currentIndex();
+	QStandardItemModel *model = (QStandardItemModel *)this->treeView->model();
+	QStandardItem *item = model->itemFromIndex(index);
 	QModelIndex groupIndex = index;
 	while (groupIndex.parent() != QModelIndex()) {
 		groupIndex = groupIndex.parent();
 	}
 	ListGroup *group = this->mapControllers.listGroups[groupIndex.row()];
-	group->itemSelected(index);
+	MapSubWindow *window = this->activeSubWindow();
+	if (window) {
+		group->itemSelected(window, item);
+	}
 }
 
 void MainWindow::centerOn(QPoint point) {
@@ -176,10 +193,10 @@ void MainWindow::centerOn(QPoint point) {
 	}
 }
 
-void MainWindow::changeEditMode(EditMode::Mode mode) {
+void MainWindow::changeEditMode(int mode) {
 	MapSubWindow *window = this->activeSubWindow();
 	if (window) {
-		window->get_map()->set_editMode(mode);
+		window->get_map()->set_editMode((EditMode::Mode)mode);
 	}
 }
 void MainWindow::editModeChanged(EditMode::Mode mode) {

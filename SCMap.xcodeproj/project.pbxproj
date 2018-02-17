@@ -44,12 +44,20 @@
 		A04123251C543A7C00E2E777 /* TerrainEditMode.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A04123231C543A7C00E2E777 /* TerrainEditMode.cpp */; };
 		A04123281C54A5FB00E2E777 /* MapControllers.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A04123261C54A5FB00E2E777 /* MapControllers.cpp */; };
 		A041232E1C57238A00E2E777 /* LocationsEditMode.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A041232C1C57238A00E2E777 /* LocationsEditMode.cpp */; };
+		A0461F362035328700AE93C6 /* DataManager.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A0461F342035328700AE93C6 /* DataManager.cpp */; };
+		A0461F392035353300AE93C6 /* units.dat in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0461F372035345F00AE93C6 /* units.dat */; };
+		A0461F3C203542B100AE93C6 /* tminimap.pcx in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0461F3A203542A000AE93C6 /* tminimap.pcx */; };
+		A0461F3E2036922500AE93C6 /* stat_txt.tbl in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0461F3D2036921B00AE93C6 /* stat_txt.tbl */; };
+		A0461F4120369FAC00AE93C6 /* UnitsEditMode.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A0461F3F20369FAC00AE93C6 /* UnitsEditMode.cpp */; };
+		A0645EA3203006EE0025AA28 /* UnitsMinimapLayer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A0645EA1203006EE0025AA28 /* UnitsMinimapLayer.cpp */; };
+		A07052262029677D0013C883 /* GridMapLayer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A07052242029677D0013C883 /* GridMapLayer.cpp */; };
 		A097C0A41C507BF300874150 /* PainterScrollArea.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A097C0A21C507BF300874150 /* PainterScrollArea.cpp */; };
 		A097C0A71C507C9A00874150 /* MapScrollArea.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A097C0A51C507C9A00874150 /* MapScrollArea.cpp */; };
 		A097C0A81C50927D00874150 /* PainterScrollArea.h in Compile Sources */ = {isa = PBXBuildFile; fileRef = A097C0A31C507BF300874150 /* PainterScrollArea.h */; };
 		A097C0A91C50927D00874150 /* MapScrollArea.h in Compile Sources */ = {isa = PBXBuildFile; fileRef = A097C0A61C507C9A00874150 /* MapScrollArea.h */; };
 		A097C0B01C532FA400874150 /* MinimapWidget.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A097C0AE1C532FA400874150 /* MinimapWidget.cpp */; };
 		A097C0B11C53312F00874150 /* MinimapWidget.h in Compile Sources */ = {isa = PBXBuildFile; fileRef = A097C0AF1C532FA400874150 /* MinimapWidget.h */; };
+		A0A36C2D2026BCCE0001CB5C /* LocationsMapLayer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A0A36C2B2026BCCE0001CB5C /* LocationsMapLayer.cpp */; };
 		A99B2AA0F9CBBDD12BA126A4 /* DiskArbitration.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */; };
 		B1836DE829D840FA871355BA /* LocationsListGroup.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2DFF2E85C2F1458C94FD6C70 /* LocationsListGroup.cpp */; };
 		B4EDFC554F4046E06D4D0F06 /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 29278340428C4CF1FB158280 /* QtGui.framework */; };
@@ -100,6 +108,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				A0461F3E2036922500AE93C6 /* stat_txt.tbl in CopyFiles */,
+				A0461F3C203542B100AE93C6 /* tminimap.pcx in CopyFiles */,
+				A0461F392035353300AE93C6 /* units.dat in CopyFiles */,
 				A02E128C1C4AEBF80054D1C2 /* libSFmpqapi.dylib in CopyFiles */,
 				E9141225C4464BE4AB3F50F1 /* badlands.cv5 in CopyFiles */,
 				D89065BB66E94CE8A87C44A9 /* badlands.grp in CopyFiles */,
@@ -157,12 +168,26 @@
 		A04123271C54A5FB00E2E777 /* MapControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapControllers.h; path = Sources/MapControllers.h; sourceTree = SOURCE_ROOT; };
 		A041232C1C57238A00E2E777 /* LocationsEditMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LocationsEditMode.cpp; sourceTree = "<group>"; };
 		A041232D1C57238A00E2E777 /* LocationsEditMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsEditMode.h; sourceTree = "<group>"; };
+		A0461F342035328700AE93C6 /* DataManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DataManager.cpp; path = Sources/DataManager.cpp; sourceTree = SOURCE_ROOT; };
+		A0461F352035328700AE93C6 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = Sources/DataManager.h; sourceTree = SOURCE_ROOT; };
+		A0461F372035345F00AE93C6 /* units.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = units.dat; path = Resources/units.dat; sourceTree = SOURCE_ROOT; };
+		A0461F3A203542A000AE93C6 /* tminimap.pcx */ = {isa = PBXFileReference; lastKnownFileType = file; name = tminimap.pcx; path = Resources/tminimap.pcx; sourceTree = SOURCE_ROOT; };
+		A0461F3D2036921B00AE93C6 /* stat_txt.tbl */ = {isa = PBXFileReference; lastKnownFileType = file; name = stat_txt.tbl; path = Resources/stat_txt.tbl; sourceTree = SOURCE_ROOT; };
+		A0461F3F20369FAC00AE93C6 /* UnitsEditMode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UnitsEditMode.cpp; sourceTree = "<group>"; };
+		A0461F4020369FAC00AE93C6 /* UnitsEditMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitsEditMode.h; sourceTree = "<group>"; };
+		A0645EA1203006EE0025AA28 /* UnitsMinimapLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UnitsMinimapLayer.cpp; sourceTree = "<group>"; };
+		A0645EA2203006EE0025AA28 /* UnitsMinimapLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitsMinimapLayer.h; sourceTree = "<group>"; };
+		A07052242029677D0013C883 /* GridMapLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GridMapLayer.cpp; path = Sources/MapLayers/GridMapLayer.cpp; sourceTree = SOURCE_ROOT; };
+		A07052252029677D0013C883 /* GridMapLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GridMapLayer.h; path = Sources/MapLayers/GridMapLayer.h; sourceTree = SOURCE_ROOT; };
 		A097C0A21C507BF300874150 /* PainterScrollArea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PainterScrollArea.cpp; path = Sources/PainterScrollArea.cpp; sourceTree = SOURCE_ROOT; };
 		A097C0A31C507BF300874150 /* PainterScrollArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PainterScrollArea.h; path = Sources/PainterScrollArea.h; sourceTree = SOURCE_ROOT; };
 		A097C0A51C507C9A00874150 /* MapScrollArea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapScrollArea.cpp; path = Sources/MapScrollArea.cpp; sourceTree = SOURCE_ROOT; };
 		A097C0A61C507C9A00874150 /* MapScrollArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapScrollArea.h; path = Sources/MapScrollArea.h; sourceTree = SOURCE_ROOT; };
 		A097C0AE1C532FA400874150 /* MinimapWidget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MinimapWidget.cpp; path = Sources/MinimapWidget.cpp; sourceTree = SOURCE_ROOT; };
 		A097C0AF1C532FA400874150 /* MinimapWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinimapWidget.h; path = Sources/MinimapWidget.h; sourceTree = SOURCE_ROOT; };
+		A0A36C2B2026BCCE0001CB5C /* LocationsMapLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LocationsMapLayer.cpp; path = Sources/MapLayers/LocationsMapLayer.cpp; sourceTree = SOURCE_ROOT; };
+		A0A36C2C2026BCCE0001CB5C /* LocationsMapLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LocationsMapLayer.h; path = Sources/MapLayers/LocationsMapLayer.h; sourceTree = SOURCE_ROOT; };
+		A0A36C2E20270EF80001CB5C /* Properties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Properties.h; path = Sources/Properties.h; sourceTree = SOURCE_ROOT; };
 		A1A67BEAA744704B29168D39 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		A74776B054E147399389A218 /* poppack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poppack.h; sourceTree = "<group>"; };
 		AA4E90DF50854A3CB415DBEB /* badlands.cv5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = badlands.cv5; sourceTree = "<group>"; };
@@ -237,6 +262,10 @@
 				B123BDB5609B4278900ADE81 /* MapLayer.h */,
 				8899459D04E54DD69CB2B249 /* TerrainMapLayer.cpp */,
 				138349D9A90144199BD0ED39 /* TerrainMapLayer.h */,
+				A07052242029677D0013C883 /* GridMapLayer.cpp */,
+				A07052252029677D0013C883 /* GridMapLayer.h */,
+				A0A36C2B2026BCCE0001CB5C /* LocationsMapLayer.cpp */,
+				A0A36C2C2026BCCE0001CB5C /* LocationsMapLayer.h */,
 			);
 			path = MapLayers;
 			sourceTree = "<group>";
@@ -259,6 +288,8 @@
 				A04123241C543A7C00E2E777 /* TerrainEditMode.h */,
 				A041232C1C57238A00E2E777 /* LocationsEditMode.cpp */,
 				A041232D1C57238A00E2E777 /* LocationsEditMode.h */,
+				A0461F3F20369FAC00AE93C6 /* UnitsEditMode.cpp */,
+				A0461F4020369FAC00AE93C6 /* UnitsEditMode.h */,
 			);
 			name = EditModes;
 			path = Sources/EditModes;
@@ -271,6 +302,8 @@
 				A041231B1C54283800E2E777 /* MinimapLayer.h */,
 				A041231C1C54283800E2E777 /* TerrainMinimapLayer.cpp */,
 				A041231D1C54283800E2E777 /* TerrainMinimapLayer.h */,
+				A0645EA1203006EE0025AA28 /* UnitsMinimapLayer.cpp */,
+				A0645EA2203006EE0025AA28 /* UnitsMinimapLayer.h */,
 			);
 			name = MinimapLayers;
 			path = Sources/MinimapLayers;
@@ -324,6 +357,8 @@
 				327757F6E7BC47D48F5DDA2B /* MainWindow.h */,
 				3875217E711A47C38D01F1BB /* Map.cpp */,
 				B8D016B316104856B88FACA7 /* Map.h */,
+				A0461F342035328700AE93C6 /* DataManager.cpp */,
+				A0461F352035328700AE93C6 /* DataManager.h */,
 				EBEC958E1B9F4DD6B3C4452A /* MapSubWindow.cpp */,
 				7C1CB0FA72824D0182FA7BDF /* MapSubWindow.h */,
 				A097C0A21C507BF300874150 /* PainterScrollArea.cpp */,
@@ -334,6 +369,7 @@
 				A097C0AF1C532FA400874150 /* MinimapWidget.h */,
 				A04123261C54A5FB00E2E777 /* MapControllers.cpp */,
 				A04123271C54A5FB00E2E777 /* MapControllers.h */,
+				A0A36C2E20270EF80001CB5C /* Properties.h */,
 				A04123181C54283800E2E777 /* EditModes */,
 				A04123191C54283800E2E777 /* MinimapLayers */,
 				6F441A7D1E344F58AAA8D9D1 /* ListGroups */,
@@ -345,6 +381,9 @@
 		F76A674886644DFA853D858B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A0461F3D2036921B00AE93C6 /* stat_txt.tbl */,
+				A0461F3A203542A000AE93C6 /* tminimap.pcx */,
+				A0461F372035345F00AE93C6 /* units.dat */,
 				AA4E90DF50854A3CB415DBEB /* badlands.cv5 */,
 				179A130C79E4458C9615BA2A /* badlands.grp */,
 				64F8A5A1D562400BA0142B58 /* badlands.vf4 */,
@@ -394,6 +433,7 @@
 		6DB9C3763D02B1415CD9D565 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0920;
 			};
 			buildConfigurationList = DAC4C1AA5EDEA1C85E9CA5E6 /* Build configuration list for PBXProject "SCMap" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -454,7 +494,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0461F4120369FAC00AE93C6 /* UnitsEditMode.cpp in Compile Sources */,
+				A0461F362035328700AE93C6 /* DataManager.cpp in Compile Sources */,
 				A097C0B11C53312F00874150 /* MinimapWidget.h in Compile Sources */,
+				A0A36C2D2026BCCE0001CB5C /* LocationsMapLayer.cpp in Compile Sources */,
 				A04123221C542BED00E2E777 /* EditMode.cpp in Compile Sources */,
 				A097C0A81C50927D00874150 /* PainterScrollArea.h in Compile Sources */,
 				A097C0A91C50927D00874150 /* MapScrollArea.h in Compile Sources */,
@@ -480,6 +523,8 @@
 				A02E12921C4B0EC20054D1C2 /* SpritesListGroup.cpp in Compile Sources */,
 				A02E128F1C4B0E280054D1C2 /* UnitsListGroup.cpp in Compile Sources */,
 				D500E2B49AC04D84958D1417 /* MapLayer.cpp in Compile Sources */,
+				A0645EA3203006EE0025AA28 /* UnitsMinimapLayer.cpp in Compile Sources */,
+				A07052262029677D0013C883 /* GridMapLayer.cpp in Compile Sources */,
 				B7F71156000E438E9BEA643E /* TerrainMapLayer.cpp in Compile Sources */,
 			);
 			name = "Compile Sources";
@@ -499,19 +544,41 @@
 		339EE1B2CC4FC24589A0EA95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = x86_64;
 				CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1.0;
 				DYLIB_CURRENT_VERSION = 1.0.0;
 				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib,
 					/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib,
 					/Users/zachzahos/Documents/Projects/SCMap,
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					.,
 					../../../Applications/Qt551/5.5/clang_64/lib/QtWidgets.framework/Headers,
@@ -528,7 +595,7 @@
 					/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib,
 					/System/Library/Frameworks/,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = (
 					"-pipe",
 					"-O2",
@@ -569,20 +636,43 @@
 		3AA6C32AC930069E80220CF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = x86_64;
 				CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1.0;
 				DYLIB_CURRENT_VERSION = 1.0.0;
 				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib,
 					/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib,
 					/Users/zachzahos/Documents/Projects/SCMap,
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					.,
 					../../../Applications/Qt551/5.5/clang_64/lib/QtWidgets.framework/Headers,
@@ -599,7 +689,8 @@
 					/Users/zachzahos/Applications/Qt551/5.5/clang_64/lib,
 					/System/Library/Frameworks/,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-pipe",
 					"-O2",
@@ -645,6 +736,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					.,
@@ -661,9 +753,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Libraries/SFmpqapi",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.poiuyqwert.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = SCMap;
 				QT_LIBRARY_SUFFIX = "";
 				SDKROOT = macosx;
+				STRIP_SWIFT_SYMBOLS = NO;
 			};
 			name = Release;
 		};
@@ -692,9 +786,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Libraries/SFmpqapi",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.poiuyqwert.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = SCMap;
 				QT_LIBRARY_SUFFIX = _debug;
 				SDKROOT = macosx;
+				STRIP_SWIFT_SYMBOLS = NO;
 			};
 			name = Debug;
 		};
