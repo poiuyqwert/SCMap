@@ -19,14 +19,6 @@
 
 #include <QPainter>
 
-Point<u32> colorLookup[2][2] = {
-	{
-		{7,6},{32-7,6}
-	},
-	{
-		{7,32-6},{32-7,32-6}
-	}
-};
 
 void TerrainMinimapLayer::update(Map *map, QPainter &painter, QRect) {
 	CHK *chk = map->get_chk();
@@ -39,16 +31,20 @@ void TerrainMinimapLayer::update(Map *map, QPainter &painter, QRect) {
 	u16 largeDim = max(mapSize.width,mapSize.height);
 	
 	u8 step = (largeDim > CHKSectionDIM::Medium ? 2 : 1);
-	u8 size = (largeDim <= CHKSectionDIM::Tiny ? 2 : 1);
+	u8 subpixels = (largeDim <= CHKSectionDIM::Tiny ? 2 : 1);
 	
 	for (u8 y = 0; y < mapSize.height / step; y += 1) {
 		for (u8 x = 0; x < mapSize.width / step; x += 1) {
-			for (u8 yo = 0; yo < size; yo++) {
-				for (u8 xo = 0; xo < size; xo++) {
-					CHKTile tile = mtxm->get_tile({(u8)(x * step), (u8)(y * step)});
-					Pixels megatile = map->get_megatile(tile);
-					RGB rgb = tileset.wpe->get_color(megatile.get(colorLookup[yo][xo]));
-					painter.fillRect(x*size+xo,y*size+yo,1,1, QColor(rgb.r, rgb.g, rgb.b));
+			CHKTile tile = mtxm->get_tile({(u8)(x * step), (u8)(y * step)});
+			CV5Group group = tileset.cv5->get_group(tile.megatileGroup);
+			u16 megatileID = group.megatiles[tile.megatile];
+			VX4Megatile info = tileset.vx4->get_megatile(megatileID);
+			for (u8 yo = 0; yo < subpixels; yo++) {
+				for (u8 xo = 0; xo < subpixels; xo++) {
+					VX4MinitileRef ref = info.minitiles[xo+yo*4];
+					Pixels minitile = tileset.get_minitile(ref.minitile);
+					RGB rgb = tileset.wpe->get_color(minitile.get({7,6}));
+					painter.fillRect(x*subpixels+xo,y*subpixels+yo,1,1, QColor(rgb.r, rgb.g, rgb.b));
 				}
 			}
 		}
