@@ -21,7 +21,7 @@
 
 #include <QPainter>
 
-void UnitsMinimapLayer::update(Map *map, QPainter &painter, QRect rect) {
+void UnitsMinimapLayer::update(Map *map, QPainter &painter, QSize minimapSize) {
 	CHK *chk = map->get_chk();
 	Tileset tileset = map->get_tileset();
 	CHKSectionDIM *dim = chk->get_section<CHKSectionDIM>();
@@ -31,9 +31,9 @@ void UnitsMinimapLayer::update(Map *map, QPainter &painter, QRect rect) {
 	UnitsDAT *unitsDat = DataManager::getInstance().get_unitsDat();
 	PCX *tminimap = DataManager::getInstance().get_tminimap();
 
-	u8 colors[8];
+	u8 colors[SC::Player::COUNT_PLAYABLE];
 	if (colr != nullptr) {
-		for (int i = 0; i < 8; i++) {
+		for (int i = 0; i < SC::Player::COUNT_PLAYABLE; i++) {
 			colors[i] = colr->get_color(i);
 		}
 	} else {
@@ -43,12 +43,13 @@ void UnitsMinimapLayer::update(Map *map, QPainter &painter, QRect rect) {
 	float scaleX = mapSize.width * 32;
 	float scaleY = mapSize.height * 32;
 	
-	for (int i = 0; i < (int)units->count(); i++) {
+	for (int i = 0; i < (int)units->count(); i++) { // TODO: Draw order?
 		CHKUnit unit = units->get_unit(i);
-		int x1 = (unit.pos.x - unitsDat->unitSize[unit.unitID].start.x) / scaleX * rect.width();
-		int y1 = (unit.pos.y - unitsDat->unitSize[unit.unitID].start.y) / scaleY * rect.height();
-		int x2 = (unit.pos.x + unitsDat->unitSize[unit.unitID].end.x) / scaleX * rect.width();
-		int y2 = (unit.pos.y + unitsDat->unitSize[unit.unitID].end.y) / scaleY * rect.height();
+		Size<u16> size = unitsDat->placeboxSize[unit.unitID];
+		int x = (unit.pos.x - size.width/2) / scaleX * minimapSize.width();
+		int y = (unit.pos.y - size.height/2) / scaleY * minimapSize.height();
+		int w = size.width / scaleX * minimapSize.width();
+		int h = size.height / scaleY * minimapSize.height();
 		u8 color = CHKSectionCOLR::Neutral;
 		if (unit.properties.owner < SC::Player::COUNT_PLAYABLE) {
 			color = colors[unit.properties.owner];
@@ -58,7 +59,7 @@ void UnitsMinimapLayer::update(Map *map, QPainter &painter, QRect rect) {
 			paletteIndex = tminimap->get_pixels().get({color, 0});
 		}
 		RGB rgb = tileset.wpe->get_color(paletteIndex);
-		painter.fillRect(x1, y1, max(2,x2-x1), max(2,y2-y1), QColor(rgb.r, rgb.g, rgb.b));
+		painter.fillRect(x, y, max(2,w), max(2,h), QColor(rgb.r, rgb.g, rgb.b));
 	}
 }
 

@@ -56,9 +56,8 @@ void MinimapWidget::paintEvent(QPaintEvent *) {
 	if (this->map) {
 		painter.translate(this->outputRect.topLeft());
 		QSize outputSize = this->outputRect.size();
-		QRect drawRect({0,0},outputSize);
 		for (int layer = MinimapLayer::Terrain; layer < MinimapLayer::COUNT; layer++) {
-			this->mapControllers.minimapLayers[layer]->update(this->map, painter, drawRect);
+			this->mapControllers.minimapLayers[layer]->update(this->map, painter, outputSize);
 		}
 		CHKSectionDIM *dim = this->map->get_chk()->get_section<CHKSectionDIM>();
 		Size<u16> mapSize = dim->get_size();
@@ -70,7 +69,9 @@ void MinimapWidget::paintEvent(QPaintEvent *) {
 		float h = round(this->viewport.height() / height * outputSize.height()) - 1;
 		painter.setPen(Qt::white);
 		painter.drawRect(x, y, w, h);
-		painter.drawRect(drawRect.marginsAdded({1,1,0,0}));
+		QRect borderRect({0,0},outputSize);
+		borderRect = borderRect.marginsAdded({1,1,0,0});
+		painter.drawRect(borderRect);
 	}
 }
 

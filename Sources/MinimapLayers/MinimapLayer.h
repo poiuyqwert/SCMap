@@ -10,7 +10,7 @@
 
 class Map;
 class QPainter;
-class QRect;
+class QSize;
 
 class MinimapLayer {
 public:
@@ -23,5 +23,5 @@ public:
 	
 	MinimapLayer() {}
 	
-	virtual void update(Map *map, QPainter &painter, QRect rect) = 0;
+	virtual void update(Map *map, QPainter &painter, QSize minimapSize) = 0;
 };

@@ -20,7 +20,7 @@
 #include <QPainter>
 
 
-void TerrainMinimapLayer::update(Map *map, QPainter &painter, QRect) {
+void TerrainMinimapLayer::update(Map *map, QPainter &painter, QSize) {
 	CHK *chk = map->get_chk();
 	Tileset tileset = map->get_tileset();
 	

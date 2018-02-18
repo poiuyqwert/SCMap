@@ -13,6 +13,6 @@ class UnitsMinimapLayer : public MinimapLayer {
 public:
 	UnitsMinimapLayer() {}
 	
-	void update(Map *map, QPainter &painter, QRect rect);
+	void update(Map *map, QPainter &painter, QSize minimapSize);
 };
 
