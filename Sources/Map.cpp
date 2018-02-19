@@ -7,6 +7,7 @@
 //
 
 #include "Map.h"
+#include "DataManager.h"
 
 #include <libSCMS/CHK.h>
 #include <libSCMS/CHKSections.h>
@@ -20,23 +21,8 @@ Map* Map::fromCHK(CHK *chk) {
 	if (era == nullptr) {
 		return nullptr;
 	}
-	
-	const char *tilesetFilename = CHKSectionERA::TilesetFilenames[era->get_tileset()];
-	char file[256] = {0};
-	sprintf(file, "%s.cv5", tilesetFilename);
-	CV5 *cv5 = new CV5(file);
-	sprintf(file, "%s.vf4", tilesetFilename);
-	VF4 *vf4 = new VF4(file);
-	sprintf(file, "%s.vx4", tilesetFilename);
-	VX4 *vx4 = new VX4(file);
-	sprintf(file, "%s.vr4", tilesetFilename);
-	VR4 *vr4 = new VR4(file);
-	sprintf(file, "dddata.bin");
-	DDData *dddata = new DDData(file);
-	sprintf(file, "%s.wpe", tilesetFilename);
-	Palette *wpe = new Palette(file);
-	
-	Tileset tileset(cv5, vf4, vx4, vr4, dddata, wpe);
+
+	Tileset tileset = DataManager::getInstance().get_tileset(era->get_tileset());
 	
 	return new Map(chk, tileset);
 }
@@ -56,6 +42,7 @@ Map* Map::loadMap(QString filename) {
 			while (read < size && SFileReadFile(file, buffer+totalread, size-totalread, &read, nullptr)) {
 				totalread += read;
 			}
+			SFileCloseFile(file);
 			chk = new CHK();
 			chk->open_data(buffer, size);
 		} else {

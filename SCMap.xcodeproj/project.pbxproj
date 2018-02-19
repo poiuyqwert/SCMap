@@ -22,17 +22,14 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		087BAF0A07464EAB9CC87560 /* scenario.chk in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0301C98F39584926BC05A5B7 /* scenario.chk */; };
 		0C201559016E4EF3991B1296 /* Map.h in Compile Sources */ = {isa = PBXBuildFile; fileRef = B8D016B316104856B88FACA7 /* Map.h */; };
 		21988E4E1DF54EA2AF28CC42 /* MainWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = F2EA523B56574A06BC97D5A1 /* MainWindow.cpp */; };
 		25FDC8C28EB4434DAEFF9B8E /* main.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = AAA240F199854AA0A9980EE1 /* main.cpp */; };
-		2E3960AB64D748CCAD5C8EA5 /* badlands.vx4 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E9AB123A9A940AF9D247860 /* badlands.vx4 */; };
 		3179AB447E6E47AF9E970D50 /* TerrainListGroup.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C9609A93CFA444D8B4BE99E5 /* TerrainListGroup.cpp */; };
 		3ACB592D95947B6B5D674F53 /* QtCore.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 880A320EDF9BAE828D6CC3F8 /* QtCore.framework */; };
 		77A679D4DEF942D7A657589C /* Map.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 3875217E711A47C38D01F1BB /* Map.cpp */; };
 		798B3EC475EC48F6B01CCCBF /* MapSubWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = EBEC958E1B9F4DD6B3C4452A /* MapSubWindow.cpp */; };
 		8771A8C96E9C391044035D99 /* OpenGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = D4B32C2222F82AC56BADEB21 /* OpenGL.framework */; };
-		8A7DF7B1264D4B5BB3B82B8D /* badlands.vf4 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 64F8A5A1D562400BA0142B58 /* badlands.vf4 */; };
 		8D267F2E4776F0ECA2F49DC8 /* IOKit.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = A1A67BEAA744704B29168D39 /* IOKit.framework */; };
 		A02E128C1C4AEBF80054D1C2 /* libSFmpqapi.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF5C6EA7AE1E4292889BDFF1 /* libSFmpqapi.dylib */; };
 		A02E128F1C4B0E280054D1C2 /* UnitsListGroup.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A02E128D1C4B0E280054D1C2 /* UnitsListGroup.cpp */; };
@@ -45,9 +42,6 @@
 		A04123281C54A5FB00E2E777 /* MapControllers.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A04123261C54A5FB00E2E777 /* MapControllers.cpp */; };
 		A041232E1C57238A00E2E777 /* LocationsEditMode.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A041232C1C57238A00E2E777 /* LocationsEditMode.cpp */; };
 		A0461F362035328700AE93C6 /* DataManager.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A0461F342035328700AE93C6 /* DataManager.cpp */; };
-		A0461F392035353300AE93C6 /* units.dat in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0461F372035345F00AE93C6 /* units.dat */; };
-		A0461F3C203542B100AE93C6 /* tminimap.pcx in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0461F3A203542A000AE93C6 /* tminimap.pcx */; };
-		A0461F3E2036922500AE93C6 /* stat_txt.tbl in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0461F3D2036921B00AE93C6 /* stat_txt.tbl */; };
 		A0461F4120369FAC00AE93C6 /* UnitsEditMode.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A0461F3F20369FAC00AE93C6 /* UnitsEditMode.cpp */; };
 		A0645EA3203006EE0025AA28 /* UnitsMinimapLayer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A0645EA1203006EE0025AA28 /* UnitsMinimapLayer.cpp */; };
 		A07052262029677D0013C883 /* GridMapLayer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A07052242029677D0013C883 /* GridMapLayer.cpp */; };
@@ -63,14 +57,9 @@
 		B4EDFC554F4046E06D4D0F06 /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 29278340428C4CF1FB158280 /* QtGui.framework */; };
 		B7F71156000E438E9BEA643E /* TerrainMapLayer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 8899459D04E54DD69CB2B249 /* TerrainMapLayer.cpp */; };
 		BC49970598404D2E8B751011 /* libSFmpqapi.dylib in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = FF5C6EA7AE1E4292889BDFF1 /* libSFmpqapi.dylib */; };
-		BE8E78ED70384E3AA8E77CA1 /* badlands.vr4 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D69CD93F6AC423A9874395A /* badlands.vr4 */; };
 		CA8A6BC2A6604F7B97EF2E47 /* ListGroup.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 10B657668BCC446D893E7E18 /* ListGroup.cpp */; };
-		D346ED4E40F644E28B370961 /* badlands.wpe in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8EC0500B111C46198FEF2F3F /* badlands.wpe */; };
 		D500E2B49AC04D84958D1417 /* MapLayer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = DA7A196FCD7443F287CD324E /* MapLayer.cpp */; };
-		D89065BB66E94CE8A87C44A9 /* badlands.grp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 179A130C79E4458C9615BA2A /* badlands.grp */; };
 		E45E51A644D5FC9F942ECE55 /* AGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */; };
-		E9141225C4464BE4AB3F50F1 /* badlands.cv5 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AA4E90DF50854A3CB415DBEB /* badlands.cv5 */; };
-		EA58CD2CEF724B28A1E6E077 /* dddata.bin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19D66D6E58AF477B8CD49E4D /* dddata.bin */; };
 		ED60EBCCA6D44BAC9221BDE8 /* MapSubWindow.h in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7C1CB0FA72824D0182FA7BDF /* MapSubWindow.h */; };
 		EE169CE9A646445C943C83E8 /* libSCMS.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 4095FCA2337945949CF1EADD /* libSCMS.framework */; };
 		EED633C050F9EEAFAD67370C /* QtWidgets.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 416B663E65C2EF71F5418A9A /* QtWidgets.framework */; };
@@ -108,18 +97,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				A0461F3E2036922500AE93C6 /* stat_txt.tbl in CopyFiles */,
-				A0461F3C203542B100AE93C6 /* tminimap.pcx in CopyFiles */,
-				A0461F392035353300AE93C6 /* units.dat in CopyFiles */,
 				A02E128C1C4AEBF80054D1C2 /* libSFmpqapi.dylib in CopyFiles */,
-				E9141225C4464BE4AB3F50F1 /* badlands.cv5 in CopyFiles */,
-				D89065BB66E94CE8A87C44A9 /* badlands.grp in CopyFiles */,
-				8A7DF7B1264D4B5BB3B82B8D /* badlands.vf4 in CopyFiles */,
-				BE8E78ED70384E3AA8E77CA1 /* badlands.vr4 in CopyFiles */,
-				2E3960AB64D748CCAD5C8EA5 /* badlands.vx4 in CopyFiles */,
-				D346ED4E40F644E28B370961 /* badlands.wpe in CopyFiles */,
-				EA58CD2CEF724B28A1E6E077 /* dddata.bin in CopyFiles */,
-				087BAF0A07464EAB9CC87560 /* scenario.chk in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,29 +105,22 @@
 
 /* Begin PBXFileReference section */
 		008EAC65D999671F3A03342A /* .qmake.stash */ = {isa = PBXFileReference; lastKnownFileType = text; name = .qmake.stash; path = /Users/zachzahos/Documents/Projects/SCMap/.qmake.stash; sourceTree = "<absolute>"; };
-		0301C98F39584926BC05A5B7 /* scenario.chk */ = {isa = PBXFileReference; lastKnownFileType = file; path = scenario.chk; sourceTree = "<group>"; };
 		0303B852EF81461EA8A5F481 /* windows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = windows.h; sourceTree = "<group>"; };
 		03B950DE7BD74F3D83B51CE9 /* pshpack1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pshpack1.h; sourceTree = "<group>"; };
 		10B657668BCC446D893E7E18 /* ListGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ListGroup.cpp; sourceTree = "<group>"; };
 		138349D9A90144199BD0ED39 /* TerrainMapLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerrainMapLayer.h; sourceTree = "<group>"; };
-		179A130C79E4458C9615BA2A /* badlands.grp */ = {isa = PBXFileReference; lastKnownFileType = file; path = badlands.grp; sourceTree = "<group>"; };
 		179B46AE67A24F1483883B66 /* TerrainListGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerrainListGroup.h; sourceTree = "<group>"; };
-		19D66D6E58AF477B8CD49E4D /* dddata.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = dddata.bin; sourceTree = "<group>"; };
 		29278340428C4CF1FB158280 /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = /Users/zachzahos/Applications/Qt551/5.5/clang_64/lib/QtGui.framework; sourceTree = "<absolute>"; };
 		2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
 		2DFF2E85C2F1458C94FD6C70 /* LocationsListGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LocationsListGroup.cpp; sourceTree = "<group>"; };
-		2E9AB123A9A940AF9D247860 /* badlands.vx4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = badlands.vx4; sourceTree = "<group>"; };
 		327757F6E7BC47D48F5DDA2B /* MainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
 		3875217E711A47C38D01F1BB /* Map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
 		4095FCA2337945949CF1EADD /* libSCMS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libSCMS.framework; sourceTree = SOURCE_ROOT; };
 		416B663E65C2EF71F5418A9A /* QtWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtWidgets.framework; path = /Users/zachzahos/Applications/Qt551/5.5/clang_64/lib/QtWidgets.framework; sourceTree = "<absolute>"; };
-		64F8A5A1D562400BA0142B58 /* badlands.vf4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = badlands.vf4; sourceTree = "<group>"; };
-		6D69CD93F6AC423A9874395A /* badlands.vr4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = badlands.vr4; sourceTree = "<group>"; };
 		7C1CB0FA72824D0182FA7BDF /* MapSubWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapSubWindow.h; sourceTree = "<group>"; };
 		880A320EDF9BAE828D6CC3F8 /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = /Users/zachzahos/Applications/Qt551/5.5/clang_64/lib/QtCore.framework; sourceTree = "<absolute>"; };
 		8899459D04E54DD69CB2B249 /* TerrainMapLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TerrainMapLayer.cpp; sourceTree = "<group>"; };
 		8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
-		8EC0500B111C46198FEF2F3F /* badlands.wpe */ = {isa = PBXFileReference; lastKnownFileType = file; path = badlands.wpe; sourceTree = "<group>"; };
 		A02E128D1C4B0E280054D1C2 /* UnitsListGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UnitsListGroup.cpp; path = Sources/ListGroups/UnitsListGroup.cpp; sourceTree = SOURCE_ROOT; };
 		A02E128E1C4B0E280054D1C2 /* UnitsListGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnitsListGroup.h; path = Sources/ListGroups/UnitsListGroup.h; sourceTree = SOURCE_ROOT; };
 		A02E12901C4B0EC20054D1C2 /* SpritesListGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpritesListGroup.cpp; path = Sources/ListGroups/SpritesListGroup.cpp; sourceTree = SOURCE_ROOT; };
@@ -170,9 +141,6 @@
 		A041232D1C57238A00E2E777 /* LocationsEditMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsEditMode.h; sourceTree = "<group>"; };
 		A0461F342035328700AE93C6 /* DataManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DataManager.cpp; path = Sources/DataManager.cpp; sourceTree = SOURCE_ROOT; };
 		A0461F352035328700AE93C6 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = Sources/DataManager.h; sourceTree = SOURCE_ROOT; };
-		A0461F372035345F00AE93C6 /* units.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = units.dat; path = Resources/units.dat; sourceTree = SOURCE_ROOT; };
-		A0461F3A203542A000AE93C6 /* tminimap.pcx */ = {isa = PBXFileReference; lastKnownFileType = file; name = tminimap.pcx; path = Resources/tminimap.pcx; sourceTree = SOURCE_ROOT; };
-		A0461F3D2036921B00AE93C6 /* stat_txt.tbl */ = {isa = PBXFileReference; lastKnownFileType = file; name = stat_txt.tbl; path = Resources/stat_txt.tbl; sourceTree = SOURCE_ROOT; };
 		A0461F3F20369FAC00AE93C6 /* UnitsEditMode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UnitsEditMode.cpp; sourceTree = "<group>"; };
 		A0461F4020369FAC00AE93C6 /* UnitsEditMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitsEditMode.h; sourceTree = "<group>"; };
 		A0645EA1203006EE0025AA28 /* UnitsMinimapLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UnitsMinimapLayer.cpp; sourceTree = "<group>"; };
@@ -190,7 +158,6 @@
 		A0A36C2E20270EF80001CB5C /* Properties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Properties.h; path = Sources/Properties.h; sourceTree = SOURCE_ROOT; };
 		A1A67BEAA744704B29168D39 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		A74776B054E147399389A218 /* poppack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poppack.h; sourceTree = "<group>"; };
-		AA4E90DF50854A3CB415DBEB /* badlands.cv5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = badlands.cv5; sourceTree = "<group>"; };
 		AAA240F199854AA0A9980EE1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B123BDB5609B4278900ADE81 /* MapLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapLayer.h; sourceTree = "<group>"; };
 		B8D016B316104856B88FACA7 /* Map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
@@ -340,7 +307,6 @@
 			isa = PBXGroup;
 			children = (
 				F4D7001DF0CB4DE2B9AFDECF /* Sources */,
-				F76A674886644DFA853D858B /* Resources */,
 				17308A2ADB174C108F9F063D /* Libraries */,
 				74B182DB50CB5611B5C1C297 /* Supporting Files */,
 				AF39DD055C3EF8226FBE929D /* Frameworks */,
@@ -376,24 +342,6 @@
 				7042B16B8858444B900FF00A /* MapLayers */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		F76A674886644DFA853D858B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A0461F3D2036921B00AE93C6 /* stat_txt.tbl */,
-				A0461F3A203542A000AE93C6 /* tminimap.pcx */,
-				A0461F372035345F00AE93C6 /* units.dat */,
-				AA4E90DF50854A3CB415DBEB /* badlands.cv5 */,
-				179A130C79E4458C9615BA2A /* badlands.grp */,
-				64F8A5A1D562400BA0142B58 /* badlands.vf4 */,
-				6D69CD93F6AC423A9874395A /* badlands.vr4 */,
-				2E9AB123A9A940AF9D247860 /* badlands.vx4 */,
-				8EC0500B111C46198FEF2F3F /* badlands.wpe */,
-				19D66D6E58AF477B8CD49E4D /* dddata.bin */,
-				0301C98F39584926BC05A5B7 /* scenario.chk */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		FE0A091FDBFB3E9C31B7A1BD /* Products */ = {
