@@ -53,13 +53,12 @@ void TerrainMapLayer::update(Map *map, QPainter &painter, QRect rect) {
 	int startY = rect.y() / 32.0;
 	int endX = rect.right() / 32.0;
 	int endY = rect.bottom() / 32.0;
-	
 	Pixels megatile;
-	for (u8 y = startY; y <= endY; y++) {
+	for (int y = startY; y <= endY; y++) {
 		int py = y * 32 - rect.y();
-		for (u8 x = startX; x <= endX; x++) {
+		for (int x = startX; x <= endX; x++) {
 			int px = x * 32 - rect.x();
-			CHKTile tile = mtxm->get_tile({x, y});
+			CHKTile tile = mtxm->get_tile({(u8)x, (u8)y});
 			megatile = map->get_megatile(tile);
 			QImage image(megatile.pixels, megatile.size.width, megatile.size.height, QImage::Format_Indexed8);
 			image.setColorTable(colors);

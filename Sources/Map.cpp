@@ -81,7 +81,7 @@ Map* Map::newMap() {
 	era->set_tileset(CHKSectionERA::Badlands);
 	chk->set_section(era);
 	
-	Size<u16> mapSize = {64,128};
+	Size<u16> mapSize = {256,256};
 	CHKSectionDIM *dim = new CHKSectionDIM(chk);
 	dim->set_size(mapSize);
 	chk->set_section(dim);

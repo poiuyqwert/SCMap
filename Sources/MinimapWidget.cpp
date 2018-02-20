@@ -65,8 +65,8 @@ void MinimapWidget::paintEvent(QPaintEvent *) {
 		float height = mapSize.height * 32;
 		float x = this->viewport.x() / width * outputSize.width();
 		float y = this->viewport.y() / height * outputSize.height();
-		float w = round(this->viewport.width() / width * outputSize.width()) - 1;
-		float h = round(this->viewport.height() / height * outputSize.height()) - 1;
+		float w = ceil(this->viewport.width() / width * outputSize.width()) - 1;
+		float h = ceil(this->viewport.height() / height * outputSize.height()) - 1;
 		painter.setPen(Qt::white);
 		painter.drawRect(x, y, w, h);
 		QRect borderRect({0,0},outputSize);
