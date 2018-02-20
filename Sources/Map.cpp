@@ -16,7 +16,7 @@
 #include <SFmpqapi.h>
 
 
-Map* Map::fromCHK(CHK *chk) {
+Map* Map::fromCHK(CHK *chk, MPQHANDLE mpq) {
 	CHKSectionERA *era = chk->get_section<CHKSectionERA>();
 	if (era == nullptr) {
 		return nullptr;
@@ -24,18 +24,18 @@ Map* Map::fromCHK(CHK *chk) {
 
 	Tileset tileset = DataManager::getInstance().get_tileset(era->get_tileset());
 	
-	return new Map(chk, tileset);
+	return new Map(chk, tileset, mpq);
 }
 
 Map* Map::loadMap(QString filename) {
 	CHK *chk = nullptr;
 	
 	const char *path = filename.toLatin1().data();
-	MPQHANDLE handle = MpqOpenArchiveForUpdate(path, MOAU_OPEN_EXISTING | MOAU_READ_ONLY, 1024);
+	MPQHANDLE mpq = MpqOpenArchiveForUpdate(path, MOAU_OPEN_EXISTING | MOAU_READ_ONLY, 1024);
 	
-	if (handle) {
+	if (mpq) {
 		MPQHANDLE file;
-		if (SFileOpenFileEx(handle, "staredit\\scenario.chk", SFILE_SEARCH_CURRENT_ONLY, &file) && file) {
+		if (SFileOpenFileEx(mpq, "staredit\\scenario.chk", SFILE_SEARCH_CURRENT_ONLY, &file) && file) {
 			DWORD size = SFileGetFileSize(file, nullptr);
 			DWORD totalread = 0, read = 0;
 			u8 buffer[size];
@@ -44,7 +44,12 @@ Map* Map::loadMap(QString filename) {
 			}
 			SFileCloseFile(file);
 			chk = new CHK();
-			chk->open_data(buffer, size);
+			try {
+				chk->open_data(buffer, size);
+			} catch (...) {
+				MpqCloseUpdatedArchive(mpq, 0);
+				throw;
+			}
 		} else {
 			DWORD err = GetLastError();
 			printf("%d", err);
