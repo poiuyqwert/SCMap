@@ -11,6 +11,7 @@
 #include "ListGroup.h"
 
 class UnitsListGroup : public ListGroup {
+	bool dirty;
 public:
 	UnitsListGroup(QStandardItem *parent);
 				   

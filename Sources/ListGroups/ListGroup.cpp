@@ -15,7 +15,7 @@ ListGroup::ListGroup(QStandardItem *parent, char const *name)
 	: parent(parent)
 {
 	QStandardItem *terrain = new QStandardItem(name);
-	terrain->setFlags(terrain->flags() & ~Qt::ItemIsEditable);
+	terrain->setEditable(false);
 	this->parent->appendRow(terrain);
 	this->root = terrain;
 }

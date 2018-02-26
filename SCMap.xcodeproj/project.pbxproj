@@ -41,6 +41,8 @@
 		A04123251C543A7C00E2E777 /* TerrainEditMode.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A04123231C543A7C00E2E777 /* TerrainEditMode.cpp */; };
 		A04123281C54A5FB00E2E777 /* MapControllers.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A04123261C54A5FB00E2E777 /* MapControllers.cpp */; };
 		A041232E1C57238A00E2E777 /* LocationsEditMode.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A041232C1C57238A00E2E777 /* LocationsEditMode.cpp */; };
+		A044A4DA203BBFFD004FFC8B /* NewMapDialog.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A044A4D8203BBFFD004FFC8B /* NewMapDialog.cpp */; };
+		A044A4DB203BC937004FFC8B /* NewMapDialog.h in Compile Sources */ = {isa = PBXBuildFile; fileRef = A044A4D9203BBFFD004FFC8B /* NewMapDialog.h */; };
 		A0461F362035328700AE93C6 /* DataManager.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A0461F342035328700AE93C6 /* DataManager.cpp */; };
 		A0461F4120369FAC00AE93C6 /* UnitsEditMode.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A0461F3F20369FAC00AE93C6 /* UnitsEditMode.cpp */; };
 		A0645EA3203006EE0025AA28 /* UnitsMinimapLayer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A0645EA1203006EE0025AA28 /* UnitsMinimapLayer.cpp */; };
@@ -139,6 +141,8 @@
 		A04123271C54A5FB00E2E777 /* MapControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapControllers.h; path = Sources/MapControllers.h; sourceTree = SOURCE_ROOT; };
 		A041232C1C57238A00E2E777 /* LocationsEditMode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LocationsEditMode.cpp; sourceTree = "<group>"; };
 		A041232D1C57238A00E2E777 /* LocationsEditMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsEditMode.h; sourceTree = "<group>"; };
+		A044A4D8203BBFFD004FFC8B /* NewMapDialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = NewMapDialog.cpp; path = Sources/NewMapDialog.cpp; sourceTree = SOURCE_ROOT; };
+		A044A4D9203BBFFD004FFC8B /* NewMapDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewMapDialog.h; path = Sources/NewMapDialog.h; sourceTree = SOURCE_ROOT; };
 		A0461F342035328700AE93C6 /* DataManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DataManager.cpp; path = Sources/DataManager.cpp; sourceTree = SOURCE_ROOT; };
 		A0461F352035328700AE93C6 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = Sources/DataManager.h; sourceTree = SOURCE_ROOT; };
 		A0461F3F20369FAC00AE93C6 /* UnitsEditMode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UnitsEditMode.cpp; sourceTree = "<group>"; };
@@ -321,6 +325,8 @@
 				AAA240F199854AA0A9980EE1 /* main.cpp */,
 				F2EA523B56574A06BC97D5A1 /* MainWindow.cpp */,
 				327757F6E7BC47D48F5DDA2B /* MainWindow.h */,
+				A044A4D8203BBFFD004FFC8B /* NewMapDialog.cpp */,
+				A044A4D9203BBFFD004FFC8B /* NewMapDialog.h */,
 				3875217E711A47C38D01F1BB /* Map.cpp */,
 				B8D016B316104856B88FACA7 /* Map.h */,
 				A0461F342035328700AE93C6 /* DataManager.cpp */,
@@ -442,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A044A4DB203BC937004FFC8B /* NewMapDialog.h in Compile Sources */,
 				A0461F4120369FAC00AE93C6 /* UnitsEditMode.cpp in Compile Sources */,
 				A0461F362035328700AE93C6 /* DataManager.cpp in Compile Sources */,
 				A097C0B11C53312F00874150 /* MinimapWidget.h in Compile Sources */,
@@ -460,6 +467,7 @@
 				A041231E1C54283800E2E777 /* MinimapLayer.cpp in Compile Sources */,
 				A097C0B01C532FA400874150 /* MinimapWidget.cpp in Compile Sources */,
 				77A679D4DEF942D7A657589C /* Map.cpp in Compile Sources */,
+				A044A4DA203BBFFD004FFC8B /* NewMapDialog.cpp in Compile Sources */,
 				0C201559016E4EF3991B1296 /* Map.h in Compile Sources */,
 				798B3EC475EC48F6B01CCCBF /* MapSubWindow.cpp in Compile Sources */,
 				A097C0A71C507C9A00874150 /* MapScrollArea.cpp in Compile Sources */,

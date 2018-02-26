@@ -16,7 +16,7 @@
 #include <SFmpqapi.h>
 
 
-Map* Map::fromCHK(CHK *chk, MPQHANDLE mpq) {
+Map* Map::fromCHK(QString path, CHK *chk, MPQHANDLE mpq) {
 	CHKSectionERA *era = chk->get_section<CHKSectionERA>();
 	if (era == nullptr) {
 		return nullptr;
@@ -24,13 +24,13 @@ Map* Map::fromCHK(CHK *chk, MPQHANDLE mpq) {
 
 	Tileset tileset = DataManager::getInstance().get_tileset(era->get_tileset());
 	
-	return new Map(chk, tileset, mpq);
+	return new Map(path, chk, tileset, mpq);
 }
 
-Map* Map::loadMap(QString filename) {
+Map* Map::loadMap(QString qpath) {
 	CHK *chk = nullptr;
 	
-	const char *path = filename.toLatin1().data();
+	const char *path = qpath.toLatin1().data();
 	MPQHANDLE mpq = MpqOpenArchiveForUpdate(path, MOAU_OPEN_EXISTING | MOAU_READ_ONLY, 1024);
 	
 	if (mpq) {
@@ -63,14 +63,14 @@ Map* Map::loadMap(QString filename) {
 		return nullptr;
 	}
 	
-	Map *map = Map::fromCHK(chk);
+	Map *map = Map::fromCHK(qpath, chk);
 	if (!map) {
 		delete chk;
 	}
 	return map;
 }
 
-Map* Map::newMap() {
+Map* Map::newMap(Size<u16> size) {
 	CHK *chk = new CHK();
 	
 	CHKSectionVER *ver = new CHKSectionVER(chk);
@@ -81,9 +81,8 @@ Map* Map::newMap() {
 	era->set_tileset(CHKSectionERA::Badlands);
 	chk->set_section(era);
 	
-	Size<u16> mapSize = {256,256};
 	CHKSectionDIM *dim = new CHKSectionDIM(chk);
-	dim->set_size(mapSize);
+	dim->set_size(size);
 	chk->set_section(dim);
 	
 	CHKSectionMRGN *mrgn = new CHKSectionMRGN(chk);
@@ -93,17 +92,17 @@ Map* Map::newMap() {
 	chk->set_section(unit);
 	
 	CHKSectionMTXM *mtxm = new CHKSectionMTXM(chk);
-	CHKTile *tiles = new CHKTile[mapSize.area()];
-	for (int y = 0; y < mapSize.height; y++) {
-		for (int x = 0; x < mapSize.width; x++) {
-			u16 megatileGroup = 1 + (y / 32) * (mapSize.width / 32) + (x / 32);
-			tiles[y*mapSize.width+x] = {1,megatileGroup};
+	CHKTile *tiles = new CHKTile[size.area()];
+	for (int y = 0; y < size.height; y++) {
+		for (int x = 0; x < size.width; x++) {
+			u16 megatileGroup = 1 + (y / 32) * (size.width / 32) + (x / 32);
+			tiles[y*size.width+x] = {1,megatileGroup};
 		}
 	}
 	mtxm->set_tiles(tiles);
 	chk->set_section(mtxm);
 	
-	Map *map = Map::fromCHK(chk);
+	Map *map = Map::fromCHK("Untitled", chk);
 	if (!map) {
 		delete chk;
 	}

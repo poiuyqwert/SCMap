@@ -2,6 +2,7 @@
 #include "MainWindow.h"
 #include "Map.h"
 #include "MapSubWindow.h"
+#include "NewMapDialog.h"
 #include "TerrainEditMode.h"
 #include "LocationsEditMode.h"
 #include "UnitsEditMode.h"
@@ -133,8 +134,12 @@ MainWindow::MainWindow(QWidget *parent)
 }
 
 void MainWindow::newPressed() {
-	Map *map = Map::newMap();
-	this->loadMap(map);
+	NewMapDialog *dialog = new NewMapDialog(this);
+	if (dialog->exec() == QDialog::Accepted) {
+		NewMapDetails details = dialog->get_details();
+		Map *map = Map::newMap(details.size);
+		this->loadMap(map);
+	}
 }
 
 void MainWindow::openPressed() {

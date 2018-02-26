@@ -40,7 +40,7 @@ void LocationsListGroup::update(Map *map) {
 				if (!string.isNull()) {
 					QStandardItem *item = new QStandardItem((char *)string.string);
 					item->setData(QVariant(i));
-					item->setFlags(item->flags() & ~Qt::ItemIsEditable);
+					item->setEditable(false);
 					root->appendRow(item);
 				}
 			}

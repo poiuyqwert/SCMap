@@ -1570,7 +1570,7 @@ void TerrainListGroup::update(Map *map) {
 				break;
 			}
 			QStandardItem *terrain = new QStandardItem(TerrainTypes[tileset].tileGroups[i].name);
-			terrain->setFlags(terrain->flags() & ~Qt::ItemIsEditable);
+			terrain->setEditable(false);
 			root->appendRow(terrain);
 		}
 	}

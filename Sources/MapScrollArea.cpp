@@ -119,6 +119,7 @@ void MapScrollArea::tick() {
 }
 
 void MapScrollArea::paint(QPainter &painter, QRect rect) {
+	painter.fillRect(rect, Qt::black);
 	for (int layer = MapLayer::Terrain; layer < MapLayer::COUNT; layer++) {
 		painter.save();
 		this->mapControllers.mapLayers[layer]->update(this->map, painter, rect);

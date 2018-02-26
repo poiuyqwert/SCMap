@@ -24,6 +24,7 @@ class CHK;
 class Map : public QObject {
 	Q_OBJECT
 
+	GETTER(QString, path);
 	GETTER(CHK*, chk);
 	GETTER(Tileset, tileset);
 	MPQHANDLE mpq;
@@ -35,12 +36,12 @@ class Map : public QObject {
 	
 	std::map<u16, Pixels> megatiles;
 public:
-	Map(CHK *chk, Tileset tileset, MPQHANDLE mpq)
-		: chk(chk),tileset(tileset),mpq(mpq),editMode(EditMode::Terrain) {};
+	Map(QString path, CHK *chk, Tileset tileset, MPQHANDLE mpq)
+		: path(path),chk(chk),tileset(tileset),mpq(mpq),editMode(EditMode::Terrain) {};
 	
-	static Map *fromCHK(CHK *chk, MPQHANDLE mpq = nullptr);
-	static Map *loadMap(QString filename);
-	static Map *newMap();
+	static Map *fromCHK(QString path, CHK *chk, MPQHANDLE mpq = nullptr);
+	static Map *loadMap(QString path);
+	static Map *newMap(Size<u16> size);
 	
 	BOOL is_mpq()
 		{ return (this->mpq != nullptr); }

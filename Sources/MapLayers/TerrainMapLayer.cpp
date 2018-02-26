@@ -12,6 +12,7 @@
 #include <libSCMS/Tileset.h>
 #include <libSCMS/CHK.h>
 #include <libSCMS/CHKSectionMTXM.h>
+#include <libSCMS/CHKSectionDIM.h>
 #include <libSCMS/Palette.h>
 
 #include <math.h>
@@ -24,6 +25,8 @@ void TerrainMapLayer::update(Map *map, QPainter &painter, QRect rect) {
 	Tileset tileset = map->get_tileset();
 	
 	CHKSectionMTXM *mtxm = chk->get_section<CHKSectionMTXM>();
+	CHKSectionDIM *dim = chk->get_section<CHKSectionDIM>();
+	Size<u16> mapSize = dim->get_size();
 
 	QVector<QRgb> colors;
 	for (int n = 0; n < 256; n++) {
@@ -51,8 +54,8 @@ void TerrainMapLayer::update(Map *map, QPainter &painter, QRect rect) {
 		
 	int startX = rect.x() / 32.0;
 	int startY = rect.y() / 32.0;
-	int endX = rect.right() / 32.0;
-	int endY = rect.bottom() / 32.0;
+	int endX = min((int)(rect.right() / 32.0),(int)mapSize.width-1);
+	int endY = min((int)(rect.bottom() / 32.0),(int)mapSize.height-1);
 	Pixels megatile;
 	for (int y = startY; y <= endY; y++) {
 		int py = y * 32 - rect.y();
